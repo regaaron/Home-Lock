@@ -1,0 +1,36 @@
+.footer {
+    /* background-color: #A1C057; */
+    background-color:#F7F7F7;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    max-width: 100px;
+    height: auto;
+}
+
+.lema p {
+    margin: 0;
+}
+
+.redes-sociales .social-icon {
+    color: black;
+    font-size: 20px;
+    margin-right: 10px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.redes-sociales .social-icon:hover {
+    font-size: 28px;
+    color: white;
+}
