@@ -6,9 +6,9 @@ import { ReportesComponent } from './componentes/reportes/reportes.component';
 
 
 export const routes: Routes = [
-    {path: '', redirectTo: '/home', pathMatch: 'full'},
-    {path: 'Home-Lock/home' ,component: HomeComponent},
-    {path: 'Home-Lock/about' ,component: AboutComponent},
-    {path: 'Home-Lock/descubre', component: DescubreComponent},
-    {path: 'Home-Lock/reportes',component: ReportesComponent},
+    {path: '', redirectTo: 'home', pathMatch: 'full'},
+    {path: 'home' ,component: HomeComponent},
+    {path: 'about' ,component: AboutComponent},
+    {path: 'descubre', component: DescubreComponent},
+    {path: 'reportes',component: ReportesComponent},
 ];
