@@ -13,4 +13,5 @@ export interface Casas{
     anfitrion: string;
     descripcion: string;
     servicios: string;
+    precio: number;
 }

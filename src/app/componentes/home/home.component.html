@@ -1,5 +1,11 @@
 @for (item of miscasas; track item; let i = $index) {
-
-
-    
+    <div class="col">
+        <div class="card h-100">
+            <img src={{item.imagen1}} class="card-img-top" alt="">
+            <div class="card-body">
+                <h6 class="card-title">{{item.direccion}}</h6>
+                <h6 class="card-text">${{item.precio}} MXN <span>noche</span></h6>
+            </div>
+        </div>
+    </div>
 }
