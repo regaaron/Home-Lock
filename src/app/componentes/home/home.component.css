@@ -8,3 +8,15 @@ img{
 span{
     color: rgba(54, 54, 54, 0.849);
 }
+
+.calif{
+    display: flex;
+}
+
+.direccion{
+    margin-right: 30px;
+}
+
+.calf{
+    text-align: end;
+}
