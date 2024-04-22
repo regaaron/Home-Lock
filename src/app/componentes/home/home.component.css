@@ -1,0 +1,10 @@
+img{
+    height: 300px;
+    width: 300px;
+    margin: 10px 10px 0px 10px;
+    border-radius: 15px;
+}
+
+span{
+    color: rgba(54, 54, 54, 0.849);
+}
