@@ -1,7 +1,7 @@
 img{
-    height: 300px;
-    width: 300px;
-    margin: 10px 10px 0px 10px;
+    height: 280px;
+    width: 100%;
+    margin: 10px 20px 0px 20px;
     border-radius: 15px;
 }
 
@@ -20,10 +20,15 @@ span{
 
 .card-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px; 
+    grid-template-columns: repeat(4, minmax(0, 1fr)); /* Define 4 columnas */
+    gap: 20px; /* Espacio entre las cartas */
 }
 
 .card {
-    width: 100%; 
+    width: calc(95% - 10px); /* Calcula el ancho de cada carta (25% del ancho total menos el espacio entre ellas) */
+    border:none;
+}
+
+a{
+    text-decoration: none;
 }
