@@ -15,7 +15,7 @@ export const CASAS:Casas[] = [
         calificacion: 5,
         anfitrion: "Martha",
         descripcion: "Hermosa casa recién remodelada con amplios jardines en 1,800 m2, alberca con calefacción solar, porterías de futbol y red de voleibol disponible, capacidad para 11 personas en 4 recámaras y 3 baños completos, amplia terraza con linda barra y vista al jardín para disfrutar con la familia y amigos. Es Pet Friendly y cuenta con facilidades para personas con capacidades limitadas. Ubicada en una zona tranquila sin tráfico, cerca de tiendas de autoservicio. Se renta por un mínimo de 2 noches.",
-        servicios: "Cocina Wifi Área para trabajar Estacionamiento residencial gratuito en las instalaciones: 4 espacios Alberca: Uso privado, al aire libre, disponible todo el año, disponible las 24 horas, climatizada",
+        servicios: "Cocina, Wifi, Área para trabajar, Estacionamiento residencial gratuito en las instalaciones: 4 espacios Alberca: Uso privado - al aire libre - disponible todo el año - disponible las 24 horas - climatizada",
         precio: 3500
     },
     {
@@ -83,7 +83,7 @@ export const CASAS:Casas[] = [
         calificacion: 5,
         anfitrion: "Martha",
         descripcion: "Hermosa casa recién remodelada con amplios jardines en 1,800 m2, alberca con calefacción solar, porterías de futbol y red de voleibol disponible, capacidad para 11 personas en 4 recámaras y 3 baños completos, amplia terraza con linda barra y vista al jardín para disfrutar con la familia y amigos. Es Pet Friendly y cuenta con facilidades para personas con capacidades limitadas. Ubicada en una zona tranquila sin tráfico, cerca de tiendas de autoservicio. Se renta por un mínimo de 2 noches.",
-        servicios: "Cocina Wifi Área para trabajar Estacionamiento residencial gratuito en las instalaciones: 4 espacios Alberca: Uso privado, al aire libre, disponible todo el año, disponible las 24 horas, climatizada",
+        servicios: "Cocina, Wifi, Área para trabajar, Estacionamiento residencial gratuito en las instalaciones: 4 espacios Alberca: Uso privado - al aire libre - disponible todo el año - disponible las 24 horas - climatizada",
         precio: 3500
     },
     {
@@ -100,7 +100,7 @@ export const CASAS:Casas[] = [
         calificacion: 4.4,
         anfitrion: "Emiliano",
         descripcion: "Este bungalow se encuentra dentro de la propiedad familiar en un increíble terreno en Tepoztlán, pueblo mágico a las afueras de la Ciudad de México. Arquitectura, impresionantes vistas y el canto de los pájaros te darán los buenos días cada mañana.  Diseñado por el despacho de arquitectos Cadaval & Solá-Morales, este bungalow ha sido publicado en varios libros y revistas de arquitectura y diseño alrededor del mundo.",
-        servicios: "vista al jardin, vista ala montania, cocina, wifi estacionamiento gratuito" ,
+        servicios: "vista al jardin, vista ala montania, cocina, wifi, estacionamiento gratuito" ,
         precio: 2500
     },
     {
@@ -134,7 +134,7 @@ export const CASAS:Casas[] = [
         calificacion: 4.78,
         anfitrion: "Erika",
         descripcion: "- Hermosa casa de Campo. Recién construida. Ubicada en el Pueblo Mágico de Xochitepec. - Estamos en zona de campo, poca civilización y area silenciosa lo cual te permitirá descansar y relajarte. - 1 perro = $100 2 perros o más = $250 x todos (No reembolsables) (Se entregan en efectivo al hacer el check in). - Ubicados a 5 min de la ex hacienda de Chiconcuac, Rincon dorado, Quinta Rubelinas. - Alberca SIN caldera. Zona calurosa.",
-        servicios: "Cocina Wifi Área para trabajar Estacionamiento residencial gratuito en las instalaciones: 4 espacios Alberca: Uso privado, al aire libre, disponible todo el año, disponible las 24 horas, climatizada",
+        servicios: "Cocina, Wifi, Área para trabajar, Estacionamiento residencial gratuito en las instalaciones: 4 espacios Alberca: Uso privado - al aire libre - disponible todo el año disponible - las 24 horas - climatizada",
         precio: 2750
     }
 ];
