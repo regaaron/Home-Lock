@@ -21,3 +21,15 @@ img{
 .imagenes{
     height: 200px;
 }
+
+.detalles{
+    margin: 0 0px 70px 30px;
+}
+
+.calf{
+    text-align: center;
+    border: 1px solid rgb(1, 0, 52);
+    margin: 0 30px 0 30px;
+    border-radius: 15px;
+    padding: 20px;
+}

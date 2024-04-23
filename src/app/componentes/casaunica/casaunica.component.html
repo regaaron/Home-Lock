@@ -1,9 +1,27 @@
-<div class="imagenes">
-    <div class="parent">
-        <div class="div1"><img src={{casa.imagen1}} alt=""></div>
-        <div class="div2"><img src={{casa.imagen2}} alt=""></div>
-        <div class="div3"><img src={{casa.imagen3}} alt=""></div>
-        <div class="div4"><img src={{casa.imagen4}} alt=""></div>
-        <div class="div5"><img src={{casa.imagen5}} alt=""></div>
+<div>
+    <div class="imagenes">
+        <div class="parent">
+            <div class="div1"><img src={{casa.imagen1}} alt=""></div>
+            <div class="div2"><img src={{casa.imagen2}} alt=""></div>
+            <div class="div3"><img src={{casa.imagen3}} alt=""></div>
+            <div class="div4"><img src={{casa.imagen4}} alt=""></div>
+            <div class="div5"><img src={{casa.imagen5}} alt=""></div>
+        </div>
+    </div>
+
+    <div class="detalles">
+        <h4>{{casa.direccion}}</h4>
+        <p>{{casa.huespedes}} huespedes - {{casa.habitaciones}} habitaciones - {{casa.camas}} camas - {{casa.bathrooms}} baños</p>
+    </div>
+
+    <div class="calf">
+        <h4>{{casa.calificacion}}  <br>
+            @for (item of generarArreglo(redondeo(casa.calificacion)); track item) {
+                <i class="fa-solid fa-star"></i>
+            }
+            @for (item of generarArreglo(5 - redondeo(casa.calificacion)); track item) {
+                <i class="fa-regular fa-star"></i>
+            }
+        </h4>
     </div>
 </div>
