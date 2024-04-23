@@ -11,12 +11,19 @@ span{
 
 .calif{
     display: flex;
+    justify-content: space-between;
 }
 
-.direccion{
-    margin-right: 30px;
+.spacer {
+    flex-grow: 1;
 }
 
-.calf{
-    text-align: end;
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px; 
+}
+
+.card {
+    width: 100%; 
 }

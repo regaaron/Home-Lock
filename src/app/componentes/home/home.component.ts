@@ -2,13 +2,14 @@ import { Component } from '@angular/core';
 import { Casas } from '../../casas';
 import { CasasService } from '../../servicios/casas.service';
 import { RouterModule } from '@angular/router';
+import { TruncateTextPipe } from "../../truncate-text.pipe";
 
 @Component({
-  selector: 'app-home',
-  standalone: true,
-  imports: [RouterModule],
-  templateUrl: './home.component.html',
-  styleUrl: './home.component.css'
+    selector: 'app-home',
+    standalone: true,
+    templateUrl: './home.component.html',
+    styleUrl: './home.component.css',
+    imports: [RouterModule, TruncateTextPipe]
 })
 export class HomeComponent {
 
