@@ -21,4 +21,11 @@ export class CasaunicaComponent {
     );
   }
 
+  generarArreglo(length: number): any[] {
+    return Array.from({ length });
+  }
+
+  redondeo(numero : number) : number{
+    return Math.round(numero);
+  }
 }
