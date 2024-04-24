@@ -5,7 +5,6 @@ import { CasasService } from '../../servicios/casas.service';
 import { ActivatedRoute } from '@angular/router';
 import { HomeComponent } from '../home/home.component';
 import { CasasanfitrionComponent } from '../casasanfitrion/casasanfitrion.component';
-import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-buscador',

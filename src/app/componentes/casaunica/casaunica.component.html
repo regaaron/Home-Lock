@@ -63,8 +63,17 @@
 
         <div class="extras2">
             <h2>Registra tu reserva</h2>
-            <hr>
-            <button class="btn btn-success">RESERVAR</button>
+            <label for="fechaEntrada">Fecha de entrada:
+                <input name="fechaEntrada" type="date" [(ngModel)]="fechaEntrada"><br>
+            </label>
+
+            <label for="fechaSalida">Fecha de salida:
+                <input name="fechaSalida" type="date" [(ngModel)]="fechaSalida"><br>
+            </label>
+
+            <!-- <button (click)="guardarFechas()">Guardar Fechas</button> -->
+            <!-- <app-calendario /> -->
+            <button class="btn btn-success" (click)="guardarFechas()">RESERVAR</button>
         </div>
     </div>
     

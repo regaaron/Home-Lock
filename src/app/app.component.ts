@@ -11,7 +11,7 @@ import { RegistrosComponent } from './componentes/registros/registros.component'
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet,HeaderComponent,FooterComponent,HomeComponent,DescubreComponent,RegistrosComponent,AboutComponent],
+  imports: [RouterOutlet,HeaderComponent,FooterComponent,HomeComponent,DescubreComponent,RegistrosComponent,AboutComponent,],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

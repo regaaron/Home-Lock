@@ -3,15 +3,26 @@ import { ActivatedRoute, RouterModule } from '@angular/router';
 import { Casas } from '../../casas';
 import { CasasService } from '../../servicios/casas.service';
 import { CommonModule } from '@angular/common';
+import { CalendarioComponent } from '../calendario/calendario.component';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-casaunica',
   standalone: true,
-  imports: [RouterModule, CommonModule],
+  imports: [RouterModule, CommonModule,CalendarioComponent,FormsModule],
   templateUrl: './casaunica.component.html',
   styleUrl: './casaunica.component.css'
 })
 export class CasaunicaComponent {
+
+  fechaEntrada: string = '';
+  fechaSalida: string = '';
+
+  guardarFechas() {
+    console.log('Fecha de entrada:', this.fechaEntrada);
+    console.log('Fecha de salida:', this.fechaSalida);
+    // Aquí puedes realizar las operaciones que necesites con las fechas
+  }
 
   @Input() casa!: Casas;
   constructor(public casaService : CasasService, public activatedRoute: ActivatedRoute){

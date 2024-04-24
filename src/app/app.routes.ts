@@ -5,6 +5,7 @@ import { DescubreComponent } from './componentes/descubre/descubre.component';
 import { RegistrosComponent } from './componentes/registros/registros.component';
 import { CasaunicaComponent } from './componentes/casaunica/casaunica.component';
 import { BuscadorComponent } from './componentes/buscador/buscador.component';
+import { CalendarioComponent } from './componentes/calendario/calendario.component';
 
 
 export const routes: Routes = [
@@ -14,5 +15,6 @@ export const routes: Routes = [
     {path: 'casaunica/:id', component: CasaunicaComponent},
     {path: 'home', component: DescubreComponent},
     {path: 'registros',component: RegistrosComponent},
-    {path: 'buscador/:nombreh', component: BuscadorComponent}
+    {path: 'buscador/:nombreh', component: BuscadorComponent},
+    {path: 'calendario',component: CalendarioComponent}
 ];
