@@ -94,7 +94,7 @@
 .world{
     font-size: 40px;
     margin-right: 10px;
-    color: rgb(216, 173, 151);
+    color: rgb(81, 31, 6);
 }
 
 img:hover{
@@ -149,7 +149,7 @@ img:hover{
 
 .gem{
     font-size: 45px;
-    color: rgb(255, 203, 246);
+    color: rgba(204, 152, 196, 0.757);
     margin-right: 10px;
     padding: 5px;
 }
