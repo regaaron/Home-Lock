@@ -9,10 +9,10 @@ import { BuscadorComponent } from './componentes/buscador/buscador.component';
 
 export const routes: Routes = [
     {path: '', redirectTo: 'home', pathMatch: 'full'},
-    {path: 'home' ,component: HomeComponent},
+    {path: 'descubre' ,component: HomeComponent},
     {path: 'about' ,component: AboutComponent},
     {path: 'casaunica/:id', component: CasaunicaComponent},
-    {path: 'descubre', component: DescubreComponent},
+    {path: 'home', component: DescubreComponent},
     {path: 'registros',component: RegistrosComponent},
     {path: 'buscador/:nombreh', component: BuscadorComponent}
 ];

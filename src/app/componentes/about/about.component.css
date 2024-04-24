@@ -1,0 +1,12 @@
+.card a{
+    display: inline-block;
+    margin: 10px;
+}
+
+.row{
+    margin: 5%;
+}
+
+.info{
+    background-color: #eb395a;
+}
