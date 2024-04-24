@@ -1,11 +1,8 @@
-<div class="card-grid">
+<body>
+  <div class="card-grid">
     @for (item of miscasas; track item; let i = $index) {
         <div class="card">
-            <!-- <div>
 
-                <img src={{item.imagen1}} class="card-img-top" alt="">
-            </div> -->
-            
             <div id={{i}}  class="carousel slide carousel-fade">
             <a [routerLink]="['/casaunica',i]">
 
@@ -44,7 +41,7 @@
             <a [routerLink]="['/casaunica',i]">
               <div class="card-body">
                   <div class="calif">
-                      <h6 class="card-title direccion">
+                      <h3 class="card-title direccion">
                           @if (item.direccion.length > 30) {
                               {{ item.direccion | truncateText: item.direccion.length / 2 }}
                           }@else{
@@ -54,16 +51,17 @@
                                   {{item.direccion}}
                               }
                           }
-                          </h6>
+                          </h3>
                       <div class="spacer"></div> <!-- Espacio para separar la dirección y la calificación -->
-                      <h6 class="calf"><i class="fa-solid fa-star"></i> {{item.calificacion}}</h6>
+                      <h3 class="calf"><i class="fa-solid fa-star"></i> {{item.calificacion}}</h3>
                   </div>
                   <div class="card-text">
                     <span><small><i class="fa-solid fa-user user"></i> Anfitrion: {{item.anfitrion}}</small></span>
                   </div>
-                  <h6 class="card-text">${{item.precio}} MXN <span>por noche</span></h6>
+                  <h3 class="card-text">${{item.precio}} MXN <span>por noche</span></h3>
               </div>
             </a>
         </div>
     }    
 </div>
+</body>

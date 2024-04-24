@@ -6,14 +6,14 @@
     justify-content: center; 
     align-items: center;
     
-    margin-top: 20px;
+    margin-top: 10px;
     
     /* margin-bottom: 100px; */
 }
 
 .parent {
     display: grid;
-    grid-template-columns: 400px repeat(7, 113px);
+    grid-template-columns: 400px repeat(7, 90px);
     grid-template-rows: repeat(2, 175px);
     grid-column-gap: 9px;
     grid-row-gap: 9px;
@@ -53,10 +53,16 @@
     margin: 25px 0 25px 50px;
 }
 
+.detalles p{
+    font-size: 16px;
+    margin: auto;
+}
+
 .titulo{
     margin: 25px 150px 0 50px;
     display: flex;
     width: 100%;
+    font-size: 24px;
 }
 
 .title{
@@ -118,6 +124,13 @@ img:hover{
     margin: 50px 0px 70px 50px;
     width: 65%;
     text-align: justify;
+    
+}
+
+.extras1 p{
+    display: flex;
+    align-items: center;
+    font-size: 16px;
 }
 
 
