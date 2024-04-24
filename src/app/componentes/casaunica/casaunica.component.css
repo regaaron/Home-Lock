@@ -10,7 +10,7 @@
 }
 
 .parent {
-    width: 1000px; 
+    width: 1100px; 
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, 1fr);
@@ -39,16 +39,76 @@ img {
     width: 100%;
 }
 
+.principal{
+    margin: 0px 70px 0px 70px;
+}
+
 
 .detalles{
-    margin: 0 0px 70px 30px;
+    margin: 25px 0 25px 50px;
 }
 
 .calf{
     text-align: center;
     border: 1px solid rgb(1, 0, 52);
-    margin: 0 30px 0 30px;
+    margin: 0 50px 0 50px;
     border-radius: 15px;
     padding: 20px;
 }
 
+.extras{
+    display: flex;
+    position: relative;
+}
+
+.extras1{
+    margin: 50px 0px 70px 50px;
+    width: 65%;
+    text-align: justify;
+}
+
+
+.extras2 {
+    margin: 50px 80px 70px 80px;
+    width: 35%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.323); 
+    border-radius: 15px;
+    text-align: center; 
+    min-height: 200px;
+    padding: 10px;
+}
+
+.extras2 button{
+    padding: 10px 70px 10px 70px;
+}
+
+.extras2 hr{
+ margin: 20px 20px 20px 20px;
+}
+
+
+.user{
+    font-size: 45px;
+    color: rgb(1, 0, 52);
+    margin-right: 20px;
+    padding: 5px;
+}
+
+.gem{
+    font-size: 45px;
+    color: rgb(59, 59, 59);
+    margin-right: 10px;
+    padding: 5px;
+}
+
+.ofrece{
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+.check{
+    font-size: 25px;
+    color: rgb(59, 59, 59);
+    margin-right: 5px;
+    padding: 5px;
+}

@@ -7,6 +7,7 @@ import { DescubreComponent } from './componentes/descubre/descubre.component';
 import { AboutComponent } from './componentes/about/about.component';
 import { RegistrosComponent } from './componentes/registros/registros.component';
 
+
 @Component({
   selector: 'app-root',
   standalone: true,

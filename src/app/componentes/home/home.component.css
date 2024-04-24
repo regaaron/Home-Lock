@@ -1,7 +1,6 @@
 img{
     height: 280px;
     width: 100%;
-    margin: 10px 20px 0px 20px;
     border-radius: 15px;
 }
 
@@ -27,6 +26,8 @@ span{
 .card {
     width: calc(95% - 10px); /* Calcula el ancho de cada carta (25% del ancho total menos el espacio entre ellas) */
     border:none;
+    margin: 10px 20px 0px 20px;
+
 }
 
 a{

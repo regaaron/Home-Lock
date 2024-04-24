@@ -2,11 +2,12 @@ import { Component, Input, input } from '@angular/core';
 import { ActivatedRoute, RouterModule } from '@angular/router';
 import { Casas } from '../../casas';
 import { CasasService } from '../../servicios/casas.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-casaunica',
   standalone: true,
-  imports: [RouterModule],
+  imports: [RouterModule, CommonModule],
   templateUrl: './casaunica.component.html',
   styleUrl: './casaunica.component.css'
 })

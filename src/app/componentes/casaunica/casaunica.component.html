@@ -1,27 +1,51 @@
-<div class="img-container">
-    <div class="parent">
-        <div class="div1"><img src={{casa.imagen1}} alt=""></div>
-        <div class="div2"><img src={{casa.imagen2}} alt=""></div>
-        <div class="div3"><img src={{casa.imagen3}} alt=""></div>
-        <div class="div4"><img src={{casa.imagen4}} alt=""></div>
-        <div class="div5"><img src={{casa.imagen5}} alt=""></div>
+<div class="principal">
+    <div class="img-container">
+        <div class="parent">
+            <div class="div1"><img src={{casa.imagen1}} alt=""></div>
+            <div class="div2"><img src={{casa.imagen2}} alt=""></div>
+            <div class="div3"><img src={{casa.imagen3}} alt=""></div>
+            <div class="div4"><img src={{casa.imagen4}} alt=""></div>
+            <div class="div5"><img src={{casa.imagen5}} alt=""></div>
+        </div>
     </div>
 
-    
     <div class="detalles">
         <h4>{{casa.direccion}}</h4>
         <p>{{casa.huespedes}} huespedes - {{casa.habitaciones}} habitaciones - {{casa.camas}} camas - {{casa.bathrooms}} baños</p>
     </div>
 
     <div class="calf">
-        <h4>{{casa.calificacion}}  <br>
+        <h5>{{casa.calificacion}}  <br>
             @for (item of generarArreglo(redondeo(casa.calificacion)); track item) {
                 <i class="fa-solid fa-star"></i>
             }
             @for (item of generarArreglo(5 - redondeo(casa.calificacion)); track item) {
                 <i class="fa-regular fa-star"></i>
             }
-        </h4>
+        </h5>
     </div>
 
+    <div class="extras">
+        <div class="extras1">
+            <p><i class="fa-solid fa-gem gem"></i> Sigue tus metas y alcanza un nuevo hogar</p>
+            <hr>
+            <p><i class="fa-solid fa-user user"></i> Anfitrión: {{casa.anfitrion}} (SuperAnfitrión)</p>
+            <hr>
+
+
+            <hr>
+            <p>{{casa.descripcion}}</p>
+            <hr>
+            <h1>Lo que ofrece este lugar</h1>
+            <p *ngFor="let servicio of casa.servicios.split(',')" class="ofrece"><i class="fa-solid fa-square-check check"></i> {{ servicio }}</p>
+
+        </div>
+
+        <div class="extras2">
+            <h2>Registra tu reserva</h2>
+            <hr>
+            <button class="btn btn-success">RESERVAR</button>
+        </div>
+    </div>
+    
 </div>
