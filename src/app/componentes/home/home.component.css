@@ -27,7 +27,7 @@ span{
     width: calc(95% - 10px); /* Calcula el ancho de cada carta (25% del ancho total menos el espacio entre ellas) */
     border:none;
     margin: 10px 20px 0px 20px;
-    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    /* box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px; */
 }
 
 a{
