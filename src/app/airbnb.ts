@@ -3,10 +3,10 @@ import { Casas } from "./casas";
 export const CASAS:Casas[] = [
     {
         imagen1: "assets/casas/casas1.webp",
-        imagen2: "assets/casas/casas1.webp",
-        imagen3: "assets/casas/casas1.webp",
-        imagen4: "assets/casas/casas1.webp",
-        imagen5: "assets/casas/casas1.webp",
+        imagen2: "assets/casas/casas2.webp",
+        imagen3: "assets/casas/casas3.webp",
+        imagen4: "assets/casas/casas4.webp",
+        imagen5: "assets/casas/casas3.webp",
         direccion: "residencia en Cuautla, México",
         huespedes: 11,
         habitaciones: 4,
