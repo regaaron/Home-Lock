@@ -1,0 +1,47 @@
+#container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#div1{
+    padding: 50px;
+    max-width: 1740px;
+}
+
+#destino{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#div3{
+    margin: 0 auto;
+}
+
+#txdestino{
+    font-size: 30px;
+    color: white;
+}
+
+#tdestino{
+    font-size: 50px;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#imgdestino{
+    height: 100%;
+    filter: brightness(30%);
+}
+
+#casasinfo{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#ctdiv1{
+    font-size: 18px;
+}

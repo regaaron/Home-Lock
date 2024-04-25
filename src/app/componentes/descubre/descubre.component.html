@@ -1,1 +1,238 @@
-<p>descubre works!</p>
+<div id="container">
+
+  <br><br>
+
+  <div id="destino" style="max-width: 1600px; height: fit-content;">
+    <div class="card bg-dark text-white">
+      <img src="/assets/images/cuidad.jpg" class="card-img" id="imgdestino">
+      <div class="card-img-overlay" style="text-align: center;">
+        <br><br><br><br><br><br><br><br><br>
+        <h1 class="card-title" id="tdestino">AHORRA AL INSTANTE</h1>
+        <p class="card-text" id="txdestino">Con Home-Lock ahorra hasta el 15% en tus viajes</p>
+        <p class="card-text" id="txdestino">En todos los hoteles del mundo.</p>
+      </div>
+    </div>
+  </div>
+
+  <br><br>
+
+  <div id="div1" class="row" >
+    <h1>DESCUBRE TU HOSPEDAJE FAVORITO</h1>
+    <div class="col">
+      <div class="card bg-dark text-white" style="height: 200px;">
+        <img src="/assets/images/resort.jpg" class="card-img" alt="..." style="height: 100%; object-fit: cover;">
+        <div class="card-img-overlay">
+          <div style="position: absolute; bottom: 0; right: 0; background-color: rgba(0, 0, 0, 0.5); padding: 10px;">
+            <h5 class="card-title" id="ctdiv1">Resorts</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card bg-dark text-white" style="height: 200px;">
+        <img src="/assets/images/todoincluido.jpeg" class="card-img" alt="..." style="height: 100%; object-fit: cover;">
+        <div class="card-img-overlay">
+          <div style="position: absolute; bottom: 0; right: 0; background-color: rgba(0, 0, 0, 0.5); padding: 10px;">
+            <h5 class="card-title" id="ctdiv1">Todo incluido</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card bg-dark text-white" style="height: 200px;">
+        <img src="/assets/images/familia.jpg" class="card-img" alt="..." style="height: 100%; object-fit: cover;">
+        <div class="card-img-overlay">
+          <div style="position: absolute; bottom: 0; right: 0; background-color: rgba(0, 0, 0, 0.5); padding: 10px;">
+            <h5 class="card-title" id="ctdiv1">Familia</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card bg-dark text-white" style="height: 200px;">
+        <img src="/assets/images/cabañas.webp" class="card-img" alt="..." style="height: 100%; object-fit: cover;">
+        <div class="card-img-overlay">
+          <div style="position: absolute; bottom: 0; right: 0; background-color: rgba(0, 0, 0, 0.5); padding: 10px;">
+            <h5 class="card-title" id="ctdiv1">Cabañas</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card bg-dark text-white" style="height: 200px;">
+        <img src="/assets/images/spa.jpg" class="card-img" alt="..." style="height: 100%; object-fit: cover;">
+        <div class="card-img-overlay">
+          <div style="position: absolute; bottom: 0; right: 0; background-color: rgba(0, 0, 0, 0.5); padding: 10px;">
+            <h5 class="card-title" id="ctdiv1">Spa</h5>
+          </div>
+        </div>
+      </div>
+    </div>    
+  </div>
+
+  <br><br>
+
+  <div id="buscado">
+    <h1>LO MAS BUSCADO</h1>
+    <div id="card-grid" class="row">
+      <div *ngFor="let item of miscasas.slice(0, 6); let i = index" class="col" style="max-width: 273px;">
+        <div class="card bg-dark text-white" style="height: 300px;">
+          <img src="{{ item.imagen1 }}" class="card-img" alt="..." style="height: 150px; object-fit: cover;">
+          <div class="card-body bg-white text-dark" style="height: 100px;">
+            <h5 id="casasinfo" class="card-title">{{ item.direccion }}</h5>
+            <h6 id="casasinfo" class="card-text">Precio por noche: ${{ item.precio }} MXN</h6>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <br><br>
+
+  <div id="div1" class="row" >
+    <h1>DESCUBRE LAS MEJORES PLAYAS</h1>
+    <div class="col">
+      <div class="card bg-dark text-white" style="height: 200px;">
+        <img src="/assets/images/playa1.jpg" class="card-img" alt="..." style="height: 100%; object-fit: cover;">
+        <div class="card-img-overlay">
+          <div style="position: absolute; bottom: 0; right: 0; background-color: rgba(0, 0, 0, 0.5); padding: 10px;">
+            <h5 class="card-title" id="ctdiv1">PRAIA DA FALÉSIA</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card bg-dark text-white" style="height: 200px;">
+        <img src="/assets/images/playa2.avif" class="card-img" alt="..." style="height: 100%; object-fit: cover;">
+        <div class="card-img-overlay">
+          <div style="position: absolute; bottom: 0; right: 0; background-color: rgba(0, 0, 0, 0.5); padding: 10px;">
+            <h5 class="card-title" id="ctdiv1">Playa de la concha</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card bg-dark text-white" style="height: 200px;">
+        <img src="/assets/images/playa3.webp" class="card-img" alt="..." style="height: 100%; object-fit: cover;">
+        <div class="card-img-overlay">
+          <div style="position: absolute; bottom: 0; right: 0; background-color: rgba(0, 0, 0, 0.5); padding: 10px;">
+            <h5 class="card-title" id="ctdiv1">Cancún</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card bg-dark text-white" style="height: 200px;">
+        <img src="/assets/images/playa4.jpg" class="card-img" alt="..." style="height: 100%; object-fit: cover;">
+        <div class="card-img-overlay">
+          <div style="position: absolute; bottom: 0; right: 0; background-color: rgba(0, 0, 0, 0.5); padding: 10px;">
+            <h5 class="card-title" id="ctdiv1">Hawaii</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card bg-dark text-white" style="height: 200px;">
+        <img src="/assets/images/playa5.jpg" class="card-img" alt="..." style="height: 100%; object-fit: cover;">
+        <div class="card-img-overlay">
+          <div style="position: absolute; bottom: 0; right: 0; background-color: rgba(0, 0, 0, 0.5); padding: 10px;">
+            <h5 class="card-title" id="ctdiv1">Los Cabos</h5>
+          </div>
+        </div>
+      </div>
+    </div>    
+  </div>
+
+  <br><br>
+
+  <div id="div1" class="row" >
+    <h1>VIVE LA EXPERIENCIA DE LA RIVERA MAYA</h1>
+    <div class="col">
+      <div class="card bg-dark text-white" style="height: 200px;">
+        <img src="/assets/images/xcaret.jpg" class="card-img" alt="..." style="height: 100%; object-fit: cover;">
+        <div class="card-img-overlay">
+          <div style="position: absolute; bottom: 0; right: 0; background-color: rgba(0, 0, 0, 0.5); padding: 10px;">
+            <h5 class="card-title" id="ctdiv1">LOS MEJORES HOTELES</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card bg-dark text-white" style="height: 200px;">
+        <img src="/assets/images/playaxcaret.jpg" class="card-img" alt="..." style="height: 100%; object-fit: cover;">
+        <div class="card-img-overlay">
+          <div style="position: absolute; bottom: 0; right: 0; background-color: rgba(0, 0, 0, 0.5); padding: 10px;">
+            <h5 class="card-title" id="ctdiv1">LA MEJOR PLAYA</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card bg-dark text-white" style="height: 200px;">
+        <img src="/assets/images/experciancia.jpg" class="card-img" alt="..." style="height: 100%; object-fit: cover;">
+        <div class="card-img-overlay">
+          <div style="position: absolute; bottom: 0; right: 0; background-color: rgba(0, 0, 0, 0.5); padding: 10px;">
+            <h5 class="card-title" id="ctdiv1">LA MEJOR EXPERIENCIA</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <br><br>
+  <!-- Aqui inserter video protegido usando pipes -->
+
+
+  <br><br>
+
+  <div id="div2" style="text-align: center;">
+    <div class="row">
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">Buscar cientos de sitios</h5>
+          <p class="card-text">Compare rápidamente ofertas de milones de hoteles</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">Reserva con flexibilidad</h5>
+          <p class="card-text">Reseva, agenda y cancela facilmente sin ningun cargo</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">Encuentra lo que buscas</h5>
+          <p class="card-text">Picina? Spa? Comodidad? Encontraras lugares perfectos para tus necesidades</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <br><br>
+  <!-- Aquí insertas el video protegido -->
+  <video controls>
+    <source src="https://www.youtube.com/watch?v=xTj1kJgYuHU&ab_channel=XcaretPark" type="video/mp4">
+    Tu navegador no admite el elemento de video.
+  </video>
+
+
+  <br><br>
+
+  <div id="div3" style="max-width: 1300px;">
+    <div class="card">
+      <div class="card-body">
+        <h1>AGENCIA DE VIAJES</h1>
+        <p> ¿Estás buscando una agencia de viajes confiable para planear tus próximas vacaciones? ¡Nuestro Airbnb es la respuesta! Somos una de las principales agencias de viajes en el país, y nuestro objetivo es hacer que tus viajes sean inolvidables.</p>
+        <p>Con nosotros, puedes reservar vuelos, hoteles, autos de alquiler y mucho más. Nuestro equipo de expertos en viajes está aquí para ayudarte a planear el viaje perfecto, ya sea que estés buscando unas vacaciones relajantes en la playa o una emocionante aventura en la ciudad.</p>
+        <p>En nuestra agencia, sabemos que cada viajero es único y es por eso que trabajamos para personalizar cada experiencia de viaje. Ofrecemos diferentes opciones para que puedas elegir lo que mejor se adapte a tus necesidades. Ya sea que prefieras alojarte en un hotel o en la comodidad de rentas vacacionales, la opción que elijas está aquí.</p>
+        <p>¡No esperes más! Contáctanos hoy para comenzar a planear tus próximas vacaciones.</p>
+        <p>No importa si eres un viajero experimentado o si esta es tu primera vez, en nuestra agencia de viajes encontrarás todo lo que necesitas para hacer de tu viaje una experiencia inolvidable. Un tip importante para que tu viaje sea perfecto es que no olvides organizar los tours que quieras hacer en el viaje y contratar un seguro de viaje para estar tranquilo. Listo! Ya tienes el viaje perfecto organizado.</p>
+      </div>
+    </div>
+  </div>
+
+  <br><br>
+</div>
