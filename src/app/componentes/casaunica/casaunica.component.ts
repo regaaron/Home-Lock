@@ -18,6 +18,7 @@ export class CasaunicaComponent {
 
   fechaEntrada: string = '';
   fechaSalida: string = '';
+  ids: number = 0;
 
   guardarFechas() {
     console.log('Fecha de entrada:', this.fechaEntrada);
@@ -29,7 +30,8 @@ export class CasaunicaComponent {
   constructor(public casaService : CasasService, public activatedRoute: ActivatedRoute){
     activatedRoute.params.subscribe(
       params =>{
-        this.casa = casaService.getUnaCasa(params['id'])
+        this.casa = casaService.getUnaCasa(params['id']);
+        this.ids = params['id'];
       }
     );
   }

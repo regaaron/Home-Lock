@@ -6,6 +6,7 @@ import { RegistrosComponent } from './componentes/registros/registros.component'
 import { CasaunicaComponent } from './componentes/casaunica/casaunica.component';
 import { BuscadorComponent } from './componentes/buscador/buscador.component';
 import { CalendarioComponent } from './componentes/calendario/calendario.component';
+import { ReservasComponent } from './componentes/reservas/reservas.component';
 
 
 export const routes: Routes = [
@@ -16,5 +17,6 @@ export const routes: Routes = [
     {path: 'home', component: DescubreComponent},
     {path: 'registros',component: RegistrosComponent},
     {path: 'buscador/:nombreh', component: BuscadorComponent},
-    {path: 'calendario',component: CalendarioComponent}
+    {path: 'calendario',component: CalendarioComponent},
+    {path: 'reserva/:ids', component: ReservasComponent}
 ];
