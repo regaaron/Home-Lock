@@ -1,13 +1,13 @@
 .reserva{
     width: 90%;
-    margin: 20px 0px 20px 160px;
+    margin: 20px 0px 20px 120px;
     display: flex;
     align-items: center;
 }
 
 
 .formulario{
-    width: 43%;
+    width: 45%;
     height: 500px;
     margin-right: 75px;
 }
@@ -16,6 +16,7 @@
     width: 34%;
     border: 1px solid rgb(196, 196, 196);
     border-radius: 15px;
+    margin-top: 90px;
     padding: 20px;
 }
 
@@ -56,3 +57,29 @@ hr{
     justify-content: space-between;
 }
 
+.formulario h1{
+    font-size: 30px;
+}
+
+.derecha{
+    margin-right: 10px;
+    padding: 10px;
+}
+
+.derecha:hover{
+    background-color: rgba(150, 150, 150, 0.183);
+    border-radius: 25px;
+    padding: 10px;
+}
+
+.formulario hr{
+    margin: 35px
+}
+
+.datos{
+    margin: 0 35px 0 35px;
+}
+
+.datos h3{
+    font-size: 20px;
+}
