@@ -1,31 +1,44 @@
 <div class="reserva">
 
     <div class="formulario">
-        <h1><i class="fa-solid fa-arrow-left derecha"></i>Hacer reservación</h1>
+        <h1><a class="derecha" [routerLink]="['/casaunica',id]"><</a>Hacer reservación</h1>
         <hr>
-        <div class="datos">
-            <h3>-Tu viaje-</h3>
-            <p>Fechas</p>
+        <div class="datos2">
+            <div class="datos">
+                <h3>-Tu viaje-</h3>
+                <p>Fechas</p>
+                <app-calendario (diasCalculados)="calculardias($event)"></app-calendario>
+            </div>
         </div>
         <hr>
         <div class="datos">
             <h3>-Completa la información-</h3>
             <form action="">
-                <label for="">Nombre</label>
-                <input type="text">
-                <label for="">Correo</label>
-                <input type="email" name="" id="">
-                <label for=""></label>
-                <label for="">Telefono</label>
-                <input type="number">
-                <label for="">Direccion</label>
-                <input type="text" name="" id="">
+                <div class="input-container">
+                    <i class="fas fa-user"></i>
+                    <input type="text" placeholder="Nombre" required>
+                </div>
+                <div class="input-container">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" placeholder="Correo electrónico" required>
+                </div>
+                <div class="input-container">
+                    <i class="fas fa-phone"></i>
+                    <input type="tel" placeholder="Teléfono" required>
+                </div>
+                <div class="input-container">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <input type="text" placeholder="Dirección" required>
+                </div>
+                @if (dias > 0) {
+                    <button>Reservar</button>
+                }
             </form>
+                 
 
-            <button class="btn btn-success">Reservar</button>
         </div>
     </div>
-
+    @if (dias > 0) {
     <div class="ticket">
         <div class="primera">
             <img src={{casa.imagen1}} alt="">
@@ -39,27 +52,32 @@
         <div class="segunda">
             <h2>Detalles del precio</h2>
             <div class="precionoche">
-                <p>${{casa.precio}} MXN x (5) noches</p>
-                <p>$(precioxdias) MXN</p>
+                <p>${{casa.precio}} MXN x {{dias}} noches</p>
+                <p>${{totalxnoche}} MXN</p>
             </div>
             <div class="tarifa">
                 <p>Tarifa de limpieza</p>
-                <p>$(tarifa) MXN</p>
+                <p>${{tarifa}} MXN</p>
             </div>
             <div class="tarifa2">
                 <p>Tarifa por servicio de Airbnb</p>
-                <p>$(tarifa2) MXN</p>
+                <p>${{tarifa2}} MXN</p>
             </div>
             <div class="impuestos">
                 <p>Impuestos</p>
-                <p>$(impuestos) MXN</p>
+                <p>${{impuestos}} MXN</p>
             </div>
         </div>
         <hr>
         <div class="tercera">
             <h3>Total (MXN)</h3>
-            <p>$(sumatotal) MXN</p>
+            <p>${{sumatotal}} MXN</p>
         </div>
     </div>
+    }@else {
+        <div class="sinprecio">
+            <img src="../../../assets/images/ticket.jpg" alt="">
+        </div>
+    }
 
 </div>
