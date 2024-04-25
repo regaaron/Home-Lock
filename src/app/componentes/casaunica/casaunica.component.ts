@@ -5,11 +5,12 @@ import { CasasService } from '../../servicios/casas.service';
 import { CommonModule } from '@angular/common';
 import { CalendarioComponent } from '../calendario/calendario.component';
 import { FormsModule } from '@angular/forms';
+import { CalendarioBasicoComponent } from '../calendario-basico/calendario-basico.component';
 
 @Component({
   selector: 'app-casaunica',
   standalone: true,
-  imports: [RouterModule, CommonModule,CalendarioComponent,FormsModule],
+  imports: [RouterModule, CommonModule,CalendarioComponent,FormsModule,CalendarioBasicoComponent],
   templateUrl: './casaunica.component.html',
   styleUrl: './casaunica.component.css'
 })
