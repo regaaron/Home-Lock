@@ -1,5 +1,4 @@
 <div class="reserva">
-
     <div class="formulario">
         <h1><a class="derecha" [routerLink]="['/casaunica',id]"><</a>Hacer reservación</h1>
         <hr>
@@ -13,7 +12,7 @@
         <hr>
         <div class="datos">
             <h3>-Completa la información-</h3>
-            <form action="">
+            <form (submit)="guardarReserva()">
                 <div class="input-container">
                     <i class="fas fa-user"></i>
                     <input type="text" placeholder="Nombre" required>
@@ -31,13 +30,12 @@
                     <input type="text" placeholder="Dirección" required>
                 </div>
                 @if (dias > 0) {
-                    <button>Reservar</button>
+                    <button type="submit">Reservar</button>
                 }
             </form>
-                 
-
         </div>
     </div>
+    <!-- div de la derecha ticket impreso -->
     @if (dias > 0) {
     <div class="ticket">
         <div class="primera">
