@@ -8,7 +8,6 @@
 
 .formulario{
     width: 45%;
-    height: 500px;
     margin-right: 75px;
 }
 
@@ -76,10 +75,87 @@ hr{
     margin: 35px
 }
 
-.datos{
+.datos, .datos2{
     margin: 0 35px 0 35px;
 }
 
-.datos h3{
+.datos h3, .datos2 h3{
     font-size: 20px;
+}
+
+.datos,.datos2{
+    padding: 15px;
+}
+
+.datos2{
+    border: 4px solid rgb(12, 167, 51);
+    border-radius: 25px;
+}
+
+.input-container {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-container i {
+    position: absolute;
+    left: 10px;
+    top: calc(50% - 5px);
+    transform: translateY(-50%);
+    color: #888;
+}
+
+/* Estilos para los input */
+form input[type="text"],
+form input[type="email"],
+form input[type="tel"] {
+    width: calc(100%); /* Ten en cuenta el ancho del icono y el padding */
+    padding: 12px;
+    padding-left: 44px; /* Ajusta el padding izquierdo para acomodar el icono */
+    margin-bottom: 10px;
+    border: none;
+    background-color: rgba(200, 200, 200, 0.5);
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Estilos para los input en hover */
+form input[type="text"]:hover,
+form input[type="email"]:hover,
+form input[type="tel"]:hover {
+    background-color: rgba(200, 200, 200, 0.7);
+}
+
+/* Estilos para el botón de reservar */
+form button {
+    width: calc(100%);
+    padding: 12px;
+    background-color: #4CAF50; /* Color verde */
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Estilos para el botón de reservar en hover */
+form button:hover {
+    background-color: #45a049; /* Cambio de color al pasar el mouse */
+}
+
+.sinprecio{
+    text-align: center;
+    margin-left: calc(8%);
+}
+
+.sinprecio img{
+    width: 90%;
+    height: auto;
+
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
 }

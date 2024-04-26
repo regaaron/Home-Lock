@@ -1,51 +1,91 @@
-import {Component} from '@angular/core';
+import {Component, EventEmitter, Output} from '@angular/core';
 import {FormGroup, FormControl, FormsModule, ReactiveFormsModule} from '@angular/forms';
-import {JsonPipe} from '@angular/common';
+import {CommonModule, JsonPipe} from '@angular/common';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {provideNativeDateAdapter} from '@angular/material/core';
+
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-calendario',
   standalone: true,
   providers: [provideNativeDateAdapter()],
-  imports: [MatFormFieldModule, MatDatepickerModule, FormsModule, ReactiveFormsModule, JsonPipe],
+  imports: [MatFormFieldModule, MatDatepickerModule, FormsModule, ReactiveFormsModule, JsonPipe, CommonModule],
   templateUrl: './calendario.component.html',
   styleUrl: './calendario.component.css'
 })
 export class CalendarioComponent {
+
+  
+  @Output() diasCalculados = new EventEmitter<number>();
+  startDate: Date | null = null;
+  endDate: Date | null = null;
+  dias: number | null = null;
+
   minDate: Date;
+
+  reserva1 = new Date(2024, 3, 30); 
   
 
   constructor() {
-    // Set the minimum to January 1st 20 years in the past and December 31st a year in the future.
-    const today = new Date(); // Obtiene la fecha actual
- this.minDate = new Date(today.getFullYear(), today.getMonth(), today.getDate() - 1);
-
-    
+    const today = new Date(); // Obtener la fecha actual y la hora actual
+    this.minDate = new Date(today.getFullYear(), today.getMonth(), today.getDate()); // Establecer la fecha mínima con solo la fecha, sin la hora
   }
+
   range = new FormGroup({
     start: new FormControl<Date | null>(null),
     end: new FormControl<Date | null>(null),
   });
-  
- 
+
+  getNumberOfDays(): void {
+    console.log('startDate:', this.startDate);
+    console.log('endDate:', this.endDate);
+    console.log("minDate" + this.minDate);
+
+    if (this.startDate && this.endDate) {
+
+      if (this.startDate < this.minDate) {
+      
+        Swal.fire("Fecha no permitida");
+        this.startDate = null;
+        this.endDate = null;
+        return; // Salir de la función
+
+      }
+
+      
+    // Comprobación de fecha reservada
+      if (this.startDate.getTime()  === this.reserva1.getTime()) {
+        Swal.fire("Fecha reservada");
+        this.startDate = null;
+        this.endDate = null;
+        return; // Salir de la función
+      }
 
 
-  getNumberOfDays(): number | null {
-    const startDate = this.range.controls.start.value;
-    const endDate = this.range.controls.end.value;
+      const startTimeStamp = this.startDate.getTime();
+      const endTimeStamp = this.endDate.getTime();
 
-    // Verificar si se han seleccionado ambas fechas
-    if (startDate && endDate) {
-      // Calcular la diferencia entre las fechas en milisegundos
-      const differenceMs = endDate.getTime() - startDate.getTime();
-      // Convertir la diferencia en días
-      return Math.round(differenceMs / (1000 * 60 * 60 * 24));
+      console.log('startTimeStamp:', startTimeStamp);
+      console.log('endTimeStamp:', endTimeStamp);
+
+      const differenceInMilliseconds = Math.abs(endTimeStamp - startTimeStamp);
+      console.log('differenceInMilliseconds:', differenceInMilliseconds);
+
+      const millisecondsInDay = 1000 * 60 * 60 * 24;
+      const differenceInDays = Math.floor(differenceInMilliseconds / millisecondsInDay);
+
+      console.log('differenceInDays:', differenceInDays);
+
+      this.dias = differenceInDays;
+
+      
     } else {
-      return null; // Devolver null si no se han seleccionado ambas fechas
+      this.dias = 0;
     }
+    this.diasCalculados.emit(this.dias);
   }
-
   
+
 }
