@@ -3,11 +3,12 @@
   import { CasasService } from '../../servicios/casas.service';
   import { ActivatedRoute, Router, RouterLink } from '@angular/router';
   import { CalendarioComponent } from '../calendario/calendario.component';
+  import { FormsModule } from '@angular/forms';
 
   @Component({
     selector: 'app-reservas',
     standalone: true,
-    imports: [CalendarioComponent,RouterLink],
+    imports: [CalendarioComponent,RouterLink, FormsModule],
     templateUrl: './reservas.component.html',
     styleUrl: './reservas.component.css'
   })
@@ -24,6 +25,11 @@
       );
     }
     
+    nombre: string = "";
+    correo: string = "";
+    telefono!: number;
+    direccionuser: string = "";
+
     dias!: number;
     totalxnoche: number = 0;
     tarifa: number = 0;
@@ -49,9 +55,15 @@
     }
 
     guardarReserva() {
+      console.log(this.nombre);
+      
       const reserva: Reserva = {
         dias: this.dias,
         totalxnoche: this.totalxnoche,
+        nombre: this.nombre,
+        correo: this.correo,
+        telefono: this.telefono,
+        direccionuser: this.direccionuser,
         tarifa: this.tarifa,
         tarifa2: this.tarifa2,
         impuestos: this.impuestos,
@@ -69,7 +81,6 @@
       reservasGuardadas.push(reserva);
       localStorage.setItem('reservas', JSON.stringify(reservasGuardadas));
 
-    // Redirigir al usuario a la página /descubre
     this.router.navigate(['/descubre']);
     }  
     
@@ -78,6 +89,10 @@
   export interface Reserva {
     dias: number;
     totalxnoche: number;
+    nombre: string;
+    correo: string;
+    telefono: number;
+    direccionuser: string;
     tarifa: number;
     tarifa2: number;
     impuestos: number;
