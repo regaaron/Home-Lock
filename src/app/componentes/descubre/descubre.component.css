@@ -129,3 +129,7 @@
     background-color: white; /* Opcional: para que el texto esté sobre un fondo blanco */
     padding: 0 10px; /* Opcional: para agregar espacio alrededor del texto */
 }
+
+#icon{
+    padding: 15px;
+}
