@@ -2,11 +2,12 @@ import { Component, Input } from '@angular/core';
 import { Casas } from '../../casas';
 import { CasasService } from '../../servicios/casas.service';
 import { ActivatedRoute } from '@angular/router';
+import { CalendarioComponent } from '../calendario/calendario.component';
 
 @Component({
   selector: 'app-reservas',
   standalone: true,
-  imports: [],
+  imports: [CalendarioComponent],
   templateUrl: './reservas.component.html',
   styleUrl: './reservas.component.css'
 })

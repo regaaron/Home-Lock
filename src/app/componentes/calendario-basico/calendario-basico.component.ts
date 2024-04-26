@@ -13,4 +13,9 @@ import {provideNativeDateAdapter} from '@angular/material/core';
 })
 export class CalendarioBasicoComponent {
     selected: Date | null = null;
+    minDate: Date;
+
+    constructor() {
+      this.minDate = new Date(); // Establece la fecha mínima como la fecha actual
+    }
 }
