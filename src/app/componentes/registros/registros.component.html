@@ -1,6 +1,8 @@
 <div>
 @for (item of reservas; track item) {
+    <div class="total">
     <div class="ticket">
+        <h1>Ticket de compra</h1>
         <div class="primera">
             <img src={{item.casa.imagen1}} alt="">
             <div class="data">
@@ -34,6 +36,32 @@
             <h3>Total (MXN)</h3>
             <p>${{item.sumatotal}} MXN</p>
         </div>
+    </div>
+    <div class="mitad">
+        <i class="fa-solid fa-arrow-right"></i>
+    </div>
+    <div class="datosreserva">
+        <h1>Datos de quien lo reservo</h1>
+        <div class="input-container">
+            <i class="fas fa-user"></i>
+            <p>{{item.nombre}}</p>
+        </div>
+        <hr>
+        <div class="input-container">
+            <i class="fas fa-envelope"></i>
+            <p>{{item.correo}}</p>
+        </div>
+        <hr>
+        <div class="input-container">
+            <i class="fas fa-phone"></i>
+            <p>{{item.telefono}}</p>
+        </div>
+        <hr>
+        <div class="input-container">
+            <i class="fas fa-map-marker-alt"></i>
+            <p>{{item.direccionuser}}</p>
+        </div>
+    </div>
     </div>
 }
 </div>
