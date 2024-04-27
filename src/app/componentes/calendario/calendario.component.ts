@@ -64,8 +64,8 @@ export class CalendarioComponent {
 
       if (this.startDate < this.minDate) {
         Swal.fire("Fecha no permitida");
-        this.startDate = null;
         this.endDate = null;
+        this.startDate = null;
         this.dias = 0;
         this.diasCalculados.emit(this.dias);
         return; // Salir de la función
@@ -82,16 +82,17 @@ export class CalendarioComponent {
               console.log("hola1");
               return;
               
-            }else if(this.endDate.getDate() > reserva.dia1){
+            }else {
                 //si la fecha es menor que la primera donde los meses sean iguales de los registros
-                if(((this.startDate.getDate()  <= reserva.dia2 || this.startDate.getDate()  >= reserva.dia1) 
-                   && (this.endDate.getDate()  >= reserva.dia1 || this.endDate.getDate()  <= reserva.dia2 ))){
+                if(((this.startDate.getDate()  <= reserva.dia2 && this.startDate.getDate()  >= reserva.dia1) 
+                   || (this.endDate.getDate()  >= reserva.dia1 && this.endDate.getDate()  <= reserva.dia2 ))){
                     this.ventanareservada();
                     console.log("hola2");
                     return;
                    }
             }
         }else if(this.startDate.getMonth() == reserva.mes2 && this.endDate.getMonth() == reserva.mes2){
+                
           if(this.endDate.getMonth() != reserva.mes1){
             if(this.startDate.getDate() <= reserva.dia2 ){
               this.ventanareservada();
@@ -108,21 +109,23 @@ export class CalendarioComponent {
           this.ventanareservada();
           console.log("hola4");
           return;
-        }else{
-          if(this.startDate.getDate()  >= reserva.dia2){
-              bandera = false;
-          }
-          if(bandera){
-            if(this.endDate.getDate() >= reserva.dia1){
-              this.ventanareservada();
-              console.log("hola5");
-              return;
-            }
-          }else{
-            this.ventanareservada();
-            console.log("hola6");
-            return;
-          }
+        }else {
+          
+          // if(this.startDate.getDate()  <= reserva.dia1){
+          //   console.log("hola7");
+          //     bandera = false;
+          // }
+          // if(bandera){
+          //   if(this.endDate.getDate() >= reserva.dia1){
+          //     this.ventanareservada();
+          //     console.log("hola5");
+          //     return;
+          //   }
+          // }else{
+          //   this.ventanareservada();
+          //   console.log("hola6");
+          //   return;
+          // }
         }
       }    
 
