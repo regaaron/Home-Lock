@@ -1,8 +1,25 @@
+.total{
+    width: 80%;
+    margin: 50px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    transform: translateX(20%);
+}
+
+.mitad{
+    width: 10%;
+    align-items: center ;
+}
+
+.mitad i{
+    font-size: 50px;
+}
+
 .ticket{
     width: 34%; 
     border: 1px solid rgb(196, 196, 196);
     border-radius: 15px;
-    margin-top: 90px;
     padding: 20px;
 }
 
@@ -42,4 +59,36 @@ hr{
 .tercera{
     display: flex   ;
     justify-content: space-between;
+}
+
+.input-container i {
+    transform: translateY(-20%);
+    font-size: 30px;
+    color: #888;
+    margin-right: 30px;
+}
+
+.input-container{
+    display: flex;
+    margin: 10px;
+    align-items: center;
+}
+
+.datosreserva{
+    max-width: 30%;
+    margin: 0 20px 0 20px;
+    padding: 20px;
+    border: 1px solid rgb(196, 196, 196);
+    border-radius: 15px;
+    text-align: center;
+}
+
+
+h1{
+    font-style: italic;
+    font-size: 17px;
+    color: #888;
+    background-color: aliceblue;
+    padding: 5px 15px 5px 15px;
+    margin-bottom: 30px;
 }

@@ -6,7 +6,7 @@
             <div class="datos">
                 <h3>-Tu viaje-</h3>
                 <p>Fechas</p>
-                <app-calendario (diasCalculados)="calculardias($event)"></app-calendario>
+                <app-calendario (diasCalculados)="calculardias($event)" (endcalc)="calcularend($event)" (startcalc)="calcularstart($event)"></app-calendario>
             </div>
         </div>
         <hr>
@@ -15,19 +15,19 @@
             <form (submit)="guardarReserva()">
                 <div class="input-container">
                     <i class="fas fa-user"></i>
-                    <input type="text" placeholder="Nombre" required>
+                    <input type="text" placeholder="Nombre" [(ngModel)] = "nombre" [ngModelOptions]="{standalone: true}" required>
                 </div>
                 <div class="input-container">
                     <i class="fas fa-envelope"></i>
-                    <input type="email" placeholder="Correo electrónico" required>
+                    <input type="email" placeholder="Correo electrónico" [(ngModel)] = "correo" [ngModelOptions]="{standalone: true}" required>
                 </div>
                 <div class="input-container">
                     <i class="fas fa-phone"></i>
-                    <input type="tel" placeholder="Teléfono" required>
+                    <input type="tel" placeholder="Teléfono" [(ngModel)] = "telefono" [ngModelOptions]="{standalone: true}" required>
                 </div>
                 <div class="input-container">
                     <i class="fas fa-map-marker-alt"></i>
-                    <input type="text" placeholder="Dirección" required>
+                    <input type="text" placeholder="Dirección" [(ngModel)] = "direccionuser" [ngModelOptions]="{standalone: true}" required>
                 </div>
                 @if (dias > 0) {
                     <button type="submit">Reservar</button>

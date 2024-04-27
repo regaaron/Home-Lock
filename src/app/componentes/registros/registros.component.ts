@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Reserva} from '../reservas/reservas.component';
+import { DateRange } from '@angular/material/datepicker';
 
 @Component({
   selector: 'app-registros',
@@ -10,7 +11,7 @@ import { Reserva} from '../reservas/reservas.component';
 })
 export class RegistrosComponent {
   reservas: Reserva[] = []; 
-
+  selected!: DateRange<Date>; 
   constructor() { }
 
   ngOnInit(): void {
