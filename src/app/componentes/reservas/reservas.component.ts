@@ -31,16 +31,40 @@
     direccionuser: string = "";
 
     dias!: number;
+    start!: Date;
+    end!: Date;
     totalxnoche: number = 0;
     tarifa: number = 0;
     tarifa2: number = 0;
     impuestos: number = 0;
     sumatotal: number = 0;
+    dia1!: number;
+    dia2!: number;
+    mes1!: number;
+    mes2!: number;
+    year1!: number;
+    year2!: number;
 
     calculardias(numero : number){
       this.dias = numero;
       this.calculargastos(this.dias);
     }
+
+    calcularstart(start: Date){
+      this.start = start;
+      
+      this.dia1 = start.getDate();
+      this.mes1 = start.getMonth();
+      this.year1 = start.getFullYear();
+    }
+    
+    calcularend(end: Date){
+      this.end = end;
+      
+      this.dia2 = end.getDate();
+      this.mes2 = end.getMonth();
+      this.year2 = end.getFullYear();
+    } 
 
     calculargastos(dias:number){
       this.totalxnoche = this.casa.precio *  dias;
@@ -56,7 +80,6 @@
 
     guardarReserva() {
       console.log(this.nombre);
-      
       const reserva: Reserva = {
         dias: this.dias,
         totalxnoche: this.totalxnoche,
@@ -68,6 +91,12 @@
         tarifa2: this.tarifa2,
         impuestos: this.impuestos,
         sumatotal: this.sumatotal,
+        dia1: this.dia1,
+        dia2: this.dia2,
+        mes1: this.mes1,
+        mes2: this.mes2,
+        year1: this.year1,
+        year2: this.year2,
         casa: {
           precio: this.casa.precio,
           imagen1: this.casa.imagen1,
@@ -97,6 +126,12 @@
     tarifa2: number;
     impuestos: number;
     sumatotal: number;
+    dia1: number;
+    dia2: number;
+    mes1: number;
+    mes2: number;
+    year1: number;
+    year2: number;
     casa: {
       precio: number;
       imagen1: string;

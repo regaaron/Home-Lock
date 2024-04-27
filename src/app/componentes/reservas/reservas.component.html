@@ -6,7 +6,7 @@
             <div class="datos">
                 <h3>-Tu viaje-</h3>
                 <p>Fechas</p>
-                <app-calendario (diasCalculados)="calculardias($event)"></app-calendario>
+                <app-calendario (diasCalculados)="calculardias($event)" (endcalc)="calcularend($event)" (startcalc)="calcularstart($event)"></app-calendario>
             </div>
         </div>
         <hr>

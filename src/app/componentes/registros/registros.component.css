@@ -83,9 +83,6 @@ hr{
     text-align: center;
 }
 
-.datosreserva h1{
-    max-width: 200px;
-}
 
 h1{
     font-style: italic;
@@ -93,4 +90,5 @@ h1{
     color: #888;
     background-color: aliceblue;
     padding: 5px 15px 5px 15px;
+    margin-bottom: 30px;
 }
