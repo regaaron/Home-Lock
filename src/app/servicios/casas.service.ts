@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import { CASAS } from '../airbnb';
 import { Casas } from '../casas';
+import { take } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
@@ -8,9 +10,15 @@ import { Casas } from '../casas';
 export class CasasService {
 
   private casas: Casas[] = CASAS;
-  casasanfrition: Casas[] = [];
+  casasanfrition: Casas[] = []; 
 
-  constructor() { }
+  urlAPI: string="https://home-lock.free.beeceptor.com/todos";
+
+  constructor(private http: HttpClient) { }
+
+  retornar(){
+    return this.http.get(this.urlAPI).pipe(take(1));
+  }
 
   getCasas() : Casas[]{
     return this.casas;

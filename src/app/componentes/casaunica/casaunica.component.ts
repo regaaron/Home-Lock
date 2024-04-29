@@ -43,4 +43,16 @@ export class CasaunicaComponent {
   redondeo(numero : number) : number{
     return Math.round(numero);
   }
+
+  compartir() {
+    if (navigator.share) {
+      navigator.share({
+        title: 'Título del sitio',
+        url: window.location.href
+      })
+        .then(() => console.log('Enlace compartido'))
+        .catch((error) => console.log('Error al compartir:', error));
+    }
+  }
+  
 }
