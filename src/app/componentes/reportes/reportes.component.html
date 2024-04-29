@@ -17,7 +17,7 @@
     @for (item of reservasAnteriores; track item) {
         
     <tr class=" table-warning">
-        <td class="">{{item.casa.anfitrion}}</td>
+        <td class="">{{item.nombre}}</td>
         <td>{{item.dia1}}/{{item.mes1 + 1}}/{{item.year1}} - {{item.dia2}}/{{item.mes2 + 1}}/{{item.year2}}</td>
         <td>{{item.correo}}</td>
         <td>{{item.telefono}}</td>
@@ -44,7 +44,7 @@
         @for (item of reservasPosteriores; track item) {
             
         <tr class="table-success">
-            <td>{{item.casa.anfitrion}}</td>
+            <td>{{item.nombre}}</td>
             <td>{{item.dia1}}/{{item.mes1 + 1}}/{{item.year1}} - {{item.dia2}}/{{item.mes2 + 1}}/{{item.year2}}</td>
             <td>{{item.correo}}</td>
             <td>{{item.telefono}}</td>
