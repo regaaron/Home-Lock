@@ -244,7 +244,7 @@
           <i class="fa-solid fa-magnifying-glass fa-3x" id="icon"></i>
           <h1 class="card-title">Buscar cientos de sitios</h1>
           <p class="card-text">Compare rápidamente ofertas de milones de hoteles</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
+            <a [routerLink]="['/descubre']" class="btn btn-primary">DESCUBRE</a>
         </div>
       </div>
       <div class="card" style="width: 18rem;">
@@ -252,7 +252,7 @@
           <i class="fa-regular fa-calendar fa-3x" id="icon"></i>
           <h1 class="card-title">Reserva con flexibilidad</h1>
           <p class="card-text">Reseva, agenda y cancela facilmente sin ningun cargo</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
+          <a [routerLink]="['/descubre']" class="btn btn-primary">DESCUBRE</a>
         </div>
       </div>
       <div class="card" style="width: 18rem;">
@@ -260,18 +260,25 @@
           <i class="fa-solid fa-location-dot fa-3x" id="icon"></i>
           <h1 class="card-title">Encuentra lo que buscas</h1>
           <p class="card-text">Picina? Spa? Comodidad? Encontraras lugares perfectos para tus necesidades</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
+          <a [routerLink]="['/descubre']" class="btn btn-primary">DESCRUBRE</a>
         </div>
       </div>
     </div>
   </div>
 
   <br><br>
+
   <!-- Aquí insertas el video protegido -->
-  <video controls>
-    <source src="https://www.youtube.com/watch?v=xTj1kJgYuHU&ab_channel=XcaretPark" type="video/mp4">
-    Tu navegador no admite el elemento de video.
-  </video>
+  <div id="contenedorvideo">
+    <iframe 
+      width="580" 
+      height="335" 
+      [src]="video | domseguro:'https://www.youtube.com/embed/' " 
+      frameborder="0" 
+      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-inpicture" 
+      allowfullscreen>
+    </iframe>
+  </div>
 
 
   <br><br>

@@ -133,3 +133,8 @@
 #icon{
     padding: 15px;
 }
+
+#contenedorvideo{
+    display: flex;
+    justify-content: center;
+}
