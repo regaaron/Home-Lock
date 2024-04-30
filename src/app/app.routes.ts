@@ -23,5 +23,5 @@ export const routes: Routes = [
     {path: 'reportes',component: ReportesComponent},
 
     {path: 'reserva/:ids', component: ReservasComponent},
-    {path: 'hfav', component: HFavComponent}
+    {path: 'hfav/:id', component: HFavComponent}
 ];

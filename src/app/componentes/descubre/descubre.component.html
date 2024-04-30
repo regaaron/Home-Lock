@@ -17,7 +17,7 @@
       <h1 class="texto">DESCUBRE TU HOSPEDAJE FAVORITO</h1>
     </div>
     <div class="col">
-      <a href="../hfav"><div class="card bg-dark text-white" style="height: 200px;">
+      <a [routerLink]="['/hfav',1]"><div class="card bg-dark text-white" style="height: 200px;">
         <img src="/assets/images/resort.jpg" class="card-img" alt="..." style="height: 100%; object-fit: cover;">
         <div class="card-img-overlay">
           <div style="position: absolute; bottom: 0; right: 0; background-color: rgba(0, 0, 0, 0.5); padding: 10px;">
@@ -27,7 +27,7 @@
       </div></a>
     </div>
     <div class="col">
-      <a href="about"><div class="card bg-dark text-white" style="height: 200px;">
+      <a [routerLink]="['/hfav',2]"><div class="card bg-dark text-white" style="height: 200px;">
         <img src="/assets/images/todoincluido.jpeg" class="card-img" alt="..." style="height: 100%; object-fit: cover;">
         <div class="card-img-overlay">
           <div style="position: absolute; bottom: 0; right: 0; background-color: rgba(0, 0, 0, 0.5); padding: 10px;">
@@ -37,6 +37,7 @@
       </div></a>
     </div>
     <div class="col">
+      <a [routerLink]="['/hfav',3]">
       <div class="card bg-dark text-white" style="height: 200px;">
         <img src="/assets/images/familia.jpg" class="card-img" alt="..." style="height: 100%; object-fit: cover;">
         <div class="card-img-overlay">
@@ -44,9 +45,10 @@
             <h5 class="card-title" id="ctdiv1">Familia</h5>
           </div>
         </div>
-      </div>
+      </div></a>
     </div>
     <div class="col">
+      <a [routerLink]="['/hfav',4]">
       <div class="card bg-dark text-white" style="height: 200px;">
         <img src="/assets/images/cabañas.webp" class="card-img" alt="..." style="height: 100%; object-fit: cover;">
         <div class="card-img-overlay">
@@ -54,7 +56,7 @@
             <h5 class="card-title" id="ctdiv1">Cabañas</h5>
           </div>
         </div>
-      </div>
+      </div></a>
     </div>
     <div class="col">
       <div class="card bg-dark text-white" style="height: 200px;">
