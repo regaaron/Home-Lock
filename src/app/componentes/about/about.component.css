@@ -1,28 +1,70 @@
-.card a{
-    display: inline-block;
-    margin: 10px;
-}
-
-.row{
-    margin: 5%;
-}
-
-.info{
-    background-color: #198754;
-}
-.info :hover {
-    background-color: #69917e;
-    font-size: 20px;
-}
-img{
-    height: 280px;
+#container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     width: 100%;
-    border-radius: 15px;
 }
 
+#imgdestino{
+    height: 550px;
+    width: 1800px;
+    filter: brightness(30%);
+}
 
+#tdestino{
+    font-size: 50px;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+}
 
-.card {
-    
+#div3{
+    margin: 0 auto;
+    border-style: none;
+}
+
+#titulodiv3{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+p{
+    text-align: left;
+}
+
+#hl{
+    text-align: left;
+}
+
+#imgh{
+    margin-left: 130px;
+}
+
+#icon{
+    padding: 15px;
+}
+
+.card{
+    border: none;
+}
+
+#ct{
+    text-align: center;
+}
+
+span{
+    font-weight: bold;
+}
+
+#cardequipo {
     box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+#equipo{
+    margin: 20px;
+}
+
+#titulocarta{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
 }
