@@ -8,6 +8,7 @@ import { BuscadorComponent } from './componentes/buscador/buscador.component';
 import { CalendarioComponent } from './componentes/calendario/calendario.component';
 import { ReservasComponent } from './componentes/reservas/reservas.component';
 import { ReportesComponent } from './componentes/reportes/reportes.component';
+import { HFavComponent } from './componentes/hfav/hfav.component';
 
 
 export const routes: Routes = [
@@ -21,5 +22,6 @@ export const routes: Routes = [
     {path: 'calendario',component: CalendarioComponent},
     {path: 'reportes',component: ReportesComponent},
 
-    {path: 'reserva/:ids', component: ReservasComponent}
+    {path: 'reserva/:ids', component: ReservasComponent},
+    {path: 'hfav', component: HFavComponent}
 ];
