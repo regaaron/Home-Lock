@@ -7,9 +7,13 @@
 }
 
 #imgdestino{
-    height: 550px;
-    width: 1800px;
+    height: 480px;
+    width: 100%;
     filter: brightness(30%);
+}
+
+#destino{
+    margin-top: 35px;
 }
 
 #tdestino{
@@ -26,6 +30,7 @@
 
 #titulodiv3{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    width: 70%;
 }
 
 p{
@@ -61,10 +66,56 @@ span{
 }
 
 #equipo{
-    margin: 20px;
+    width: 90%;
 }
 
-#titulocarta{
+
+#equipo .card {
+    height: 600px; 
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.card-body {
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    height: 100%;
+}
+
+.texlo {
+    text-align: justify;
+    padding: 5px;
+    margin-bottom: 10px; 
+}
+
+#titulocarta {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     text-align: center;
+    margin-bottom: 10px; 
+}
+
+.card-img-top {
+    width: 100%;
+    height: 300px; 
+    object-fit: cover;
+    border-radius: 5px 5px 0 0; 
+}
+
+.card-body {
+    position: relative;
+}
+
+
+.alan-card, .luis-card, .omar-card, .johan-card {
+    border-radius: 5px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.iconos{
+    position: absolute; 
+    bottom: 10;
+    left: 50%;
+    transform: translateX(-50%); 
+    margin-bottom: 10px; 
 }
