@@ -20,11 +20,31 @@ export class HomeComponent {
     console.log("constructos de casas");
   }
 
+
+
   ngOnInit(): void{
     console.log("ngOnInit");
+    // this.recuperarDatos();
     this.miscasas = this.miservicio.getCasas();
-    console.log(this.miscasas);
+    // console.log(this.miscasas);
     
   }
+
+  recuperarDatos(): void {
+    this.miservicio.retornar().subscribe({
+      next: this.successRequest.bind(this),
+      error: (err) => {
+        console.log("error");
+        this.miscasas = this.miservicio.getCasas();
+      }
+    });
+  }
+  
+
+   successRequest(data:any):void{
+     this.miscasas = data.casas;
+    //  this.miscasas = this.miservicio.getCasas(data.casas);
+     
+   }
 
 }

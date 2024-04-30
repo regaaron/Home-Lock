@@ -17,26 +17,27 @@
       <h1 class="texto">DESCUBRE TU HOSPEDAJE FAVORITO</h1>
     </div>
     <div class="col">
-      <div class="card bg-dark text-white" style="height: 200px;">
+      <a [routerLink]="['/hfav',1]"><div class="card bg-dark text-white" style="height: 200px;">
         <img src="/assets/images/resort.jpg" class="card-img" alt="..." style="height: 100%; object-fit: cover;">
         <div class="card-img-overlay">
           <div style="position: absolute; bottom: 0; right: 0; background-color: rgba(0, 0, 0, 0.5); padding: 10px;">
             <h5 class="card-title" id="ctdiv1">Resorts</h5>
           </div>
         </div>
-      </div>
+      </div></a>
     </div>
     <div class="col">
-      <div class="card bg-dark text-white" style="height: 200px;">
+      <a [routerLink]="['/hfav',2]"><div class="card bg-dark text-white" style="height: 200px;">
         <img src="/assets/images/todoincluido.jpeg" class="card-img" alt="..." style="height: 100%; object-fit: cover;">
         <div class="card-img-overlay">
           <div style="position: absolute; bottom: 0; right: 0; background-color: rgba(0, 0, 0, 0.5); padding: 10px;">
             <h5 class="card-title" id="ctdiv1">Todo incluido</h5>
           </div>
         </div>
-      </div>
+      </div></a>
     </div>
     <div class="col">
+      <a [routerLink]="['/hfav',3]">
       <div class="card bg-dark text-white" style="height: 200px;">
         <img src="/assets/images/familia.jpg" class="card-img" alt="..." style="height: 100%; object-fit: cover;">
         <div class="card-img-overlay">
@@ -44,9 +45,10 @@
             <h5 class="card-title" id="ctdiv1">Familia</h5>
           </div>
         </div>
-      </div>
+      </div></a>
     </div>
     <div class="col">
+      <a [routerLink]="['/hfav',4]">
       <div class="card bg-dark text-white" style="height: 200px;">
         <img src="/assets/images/cabañas.webp" class="card-img" alt="..." style="height: 100%; object-fit: cover;">
         <div class="card-img-overlay">
@@ -54,7 +56,7 @@
             <h5 class="card-title" id="ctdiv1">Cabañas</h5>
           </div>
         </div>
-      </div>
+      </div></a>
     </div>
     <div class="col">
       <div class="card bg-dark text-white" style="height: 200px;">
@@ -244,7 +246,7 @@
           <i class="fa-solid fa-magnifying-glass fa-3x" id="icon"></i>
           <h1 class="card-title">Buscar cientos de sitios</h1>
           <p class="card-text">Compare rápidamente ofertas de milones de hoteles</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
+            <a [routerLink]="['/descubre']" class="btn btn-primary">DESCUBRE</a>
         </div>
       </div>
       <div class="card" style="width: 18rem;">
@@ -252,7 +254,7 @@
           <i class="fa-regular fa-calendar fa-3x" id="icon"></i>
           <h1 class="card-title">Reserva con flexibilidad</h1>
           <p class="card-text">Reseva, agenda y cancela facilmente sin ningun cargo</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
+          <a [routerLink]="['/descubre']" class="btn btn-primary">DESCUBRE</a>
         </div>
       </div>
       <div class="card" style="width: 18rem;">
@@ -260,33 +262,24 @@
           <i class="fa-solid fa-location-dot fa-3x" id="icon"></i>
           <h1 class="card-title">Encuentra lo que buscas</h1>
           <p class="card-text">Picina? Spa? Comodidad? Encontraras lugares perfectos para tus necesidades</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
+          <a [routerLink]="['/descubre']" class="btn btn-primary">DESCRUBRE</a>
         </div>
       </div>
     </div>
   </div>
 
   <br><br>
+
   <!-- Aquí insertas el video protegido -->
-  <video controls>
-    <source src="https://www.youtube.com/watch?v=xTj1kJgYuHU&ab_channel=XcaretPark" type="video/mp4">
-    Tu navegador no admite el elemento de video.
-  </video>
-
-
-  <br><br>
-
-  <div id="div3" style="max-width: 1300px;">
-    <div class="card">
-      <div class="card-body">
-        <h1>AGENCIA DE VIAJES</h1>
-        <p> ¿Estás buscando una agencia de viajes confiable para planear tus próximas vacaciones? ¡Nuestro Airbnb es la respuesta! Somos una de las principales agencias de viajes en el país, y nuestro objetivo es hacer que tus viajes sean inolvidables.</p>
-        <p>Con nosotros, puedes reservar vuelos, hoteles, autos de alquiler y mucho más. Nuestro equipo de expertos en viajes está aquí para ayudarte a planear el viaje perfecto, ya sea que estés buscando unas vacaciones relajantes en la playa o una emocionante aventura en la ciudad.</p>
-        <p>En nuestra agencia, sabemos que cada viajero es único y es por eso que trabajamos para personalizar cada experiencia de viaje. Ofrecemos diferentes opciones para que puedas elegir lo que mejor se adapte a tus necesidades. Ya sea que prefieras alojarte en un hotel o en la comodidad de rentas vacacionales, la opción que elijas está aquí.</p>
-        <p>¡No esperes más! Contáctanos hoy para comenzar a planear tus próximas vacaciones.</p>
-        <p>No importa si eres un viajero experimentado o si esta es tu primera vez, en nuestra agencia de viajes encontrarás todo lo que necesitas para hacer de tu viaje una experiencia inolvidable. Un tip importante para que tu viaje sea perfecto es que no olvides organizar los tours que quieras hacer en el viaje y contratar un seguro de viaje para estar tranquilo. Listo! Ya tienes el viaje perfecto organizado.</p>
-      </div>
-    </div>
+  <div id="contenedorvideo">
+    <iframe 
+      width="580" 
+      height="335" 
+      [src]="video | domseguro:'https://www.youtube.com/embed/' " 
+      frameborder="0" 
+      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-inpicture" 
+      allowfullscreen>
+    </iframe>
   </div>
 
   <br><br>
