@@ -1,6 +1,13 @@
 <div class="reserva">
     <div class="formulario">
-        <h1><a class="derecha" [routerLink]="['/casaunica',id]"><</a>Hacer reservación</h1>
+        <!-- <h1><a class="derecha" [routerLink]="['/casaunica',id]"><</a>Hacer reservación</h1>
+         -->
+         <div class="button" style="padding: 10px;"> <!-- Agrega el padding que desees aquí -->
+            <h1><a [routerLink]="['/casaunica',id]" mat-fab color="success" aria-label="Example icon button with a delete icon">
+            
+              <mat-icon>keyboard_arrow_left</mat-icon> <!-- Utiliza el icono de flecha a la derecha -->
+            </a> Hacer reservación</h1>
+          </div>
         <hr>
         <div class="datos2">
             <div class="datos">
@@ -28,6 +35,9 @@
                 <div class="input-container">
                     <i class="fas fa-map-marker-alt"></i>
                     <input type="text" placeholder="Dirección" [(ngModel)] = "direccionuser" [ngModelOptions]="{standalone: true}" required>
+                </div>
+                <div class="input-container">
+                    <app-slide/>
                 </div>
                 @if (dias > 0) {
                     <button type="submit">Reservar</button>

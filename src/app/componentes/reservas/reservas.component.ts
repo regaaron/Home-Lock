@@ -5,10 +5,17 @@
   import { CalendarioComponent } from '../calendario/calendario.component';
   import { FormsModule } from '@angular/forms';
 
+  // 
+
+import {MatIconModule} from '@angular/material/icon';
+import {MatDividerModule} from '@angular/material/divider';
+import {MatButtonModule} from '@angular/material/button';
+import { SlideComponent } from '../slide/slide.component';
+
   @Component({
     selector: 'app-reservas',
     standalone: true,
-    imports: [CalendarioComponent,RouterLink, FormsModule],
+    imports: [CalendarioComponent,RouterLink, FormsModule, MatButtonModule, MatDividerModule, MatIconModule,SlideComponent],
     templateUrl: './reservas.component.html',
     styleUrl: './reservas.component.css'
   })

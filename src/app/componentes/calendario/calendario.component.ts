@@ -7,6 +7,7 @@ import {provideNativeDateAdapter} from '@angular/material/core';
 
 import Swal from 'sweetalert2';
 import { Reserva } from '../reservas/reservas.component';
+import {MatSnackBar, MatSnackBarModule} from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-calendario',
@@ -32,7 +33,7 @@ export class CalendarioComponent {
   reservas: Reserva[] = []; 
   
 
-  constructor() {
+  constructor(private snackBar: MatSnackBar) {
     const today = new Date(); // Obtener la fecha actual y la hora actual
     const reservasGuardadas: string | null = localStorage.getItem('reservas');
 
@@ -129,7 +130,12 @@ export class CalendarioComponent {
         }
       }    
 
-      Swal.fire("Fecha reservada con exito");
+      // Swal.fire("Fecha reservada con exito");
+      // this.snackBar.open('Message archived', 'Undo');
+      this.snackBar.open('Reservacion agregada', 'ok', {
+        duration: 3000
+      });
+
       console.log(this.dias);
       
       this.diasCalculados.emit(this.dias);

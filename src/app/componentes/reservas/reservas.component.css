@@ -159,3 +159,8 @@ a{
     color: black;
     font-weight: bold;
 }
+
+.xxl{
+    font-size: 20px;
+    margin: 10px;
+}
