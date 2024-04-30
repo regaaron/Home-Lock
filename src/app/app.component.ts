@@ -6,12 +6,13 @@ import { HomeComponent } from './componentes/home/home.component';
 import { DescubreComponent } from './componentes/descubre/descubre.component';
 import { AboutComponent } from './componentes/about/about.component';
 import { RegistrosComponent } from './componentes/registros/registros.component';
+import { HFavComponent } from './componentes/hfav/hfav.component';
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet,HeaderComponent,FooterComponent,HomeComponent,DescubreComponent,RegistrosComponent,AboutComponent,],
+  imports: [RouterOutlet,HeaderComponent,FooterComponent,HomeComponent,DescubreComponent,RegistrosComponent,AboutComponent,HFavComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
