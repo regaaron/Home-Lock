@@ -13,7 +13,9 @@
             <div class="datos">
                 <h3>-Tu viaje-</h3>
                 <p>Fechas</p>
+
                 <app-calendario (diasCalculados)="calculardias($event)" (endcalc)="calcularend($event)" (startcalc)="calcularstart($event)"></app-calendario>
+                
             </div>
         </div>
         <hr>
@@ -28,6 +30,7 @@
                     <i class="fas fa-envelope"></i>
                     <input type="email" placeholder="Correo electrónico" [(ngModel)] = "correo" [ngModelOptions]="{standalone: true}" required>
                 </div>
+
                 <div class="input-container">
                     <i class="fas fa-phone"></i>
                     <input type="tel" placeholder="Teléfono" [(ngModel)] = "telefono" [ngModelOptions]="{standalone: true}" required>
