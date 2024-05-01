@@ -239,6 +239,18 @@
     </div>
   </div>
 
+   <!-- Aquí insertas el video protegido -->
+   <div id="contenedorvideo">
+    <iframe 
+      width="580" 
+      height="335" 
+      [src]="video | domseguro:'https://www.youtube.com/embed/' " 
+      frameborder="0" 
+      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-inpicture" 
+      allowfullscreen>
+    </iframe>
+  </div>
+
   <div id="div2" style="text-align: center;">
     <div class="row">
       <div class="card" style="width: 18rem;">
@@ -270,17 +282,7 @@
 
   <br><br>
 
-  <!-- Aquí insertas el video protegido -->
-  <div id="contenedorvideo">
-    <iframe 
-      width="580" 
-      height="335" 
-      [src]="video | domseguro:'https://www.youtube.com/embed/' " 
-      frameborder="0" 
-      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-inpicture" 
-      allowfullscreen>
-    </iframe>
-  </div>
+ 
 
   <br><br>
 </div>

@@ -9,17 +9,20 @@ import Swal from 'sweetalert2';
 import { Reserva } from '../reservas/reservas.component';
 import {MatSnackBar, MatSnackBarModule} from '@angular/material/snack-bar';
 
+import { MAT_DATE_LOCALE } from '@angular/material/core';
+
 @Component({
   selector: 'app-calendario',
   standalone: true,
-  providers: [provideNativeDateAdapter()],
+  providers: [provideNativeDateAdapter(),    { provide: MAT_DATE_LOCALE, useValue: 'es' } ],
   imports: [MatFormFieldModule, MatDatepickerModule, FormsModule, ReactiveFormsModule, JsonPipe, CommonModule],
   templateUrl: './calendario.component.html',
   styleUrl: './calendario.component.css'
 })
 export class CalendarioComponent {
 
-  
+    
+
   @Output() diasCalculados = new EventEmitter<number>();
   
   @Output() startcalc = new EventEmitter<Date>();
@@ -65,8 +68,11 @@ export class CalendarioComponent {
 
       if (this.startDate < this.minDate) {
         Swal.fire("Fecha no permitida");
-        this.endDate = null;
+        this.range.reset();
         this.startDate = null;
+        this.endDate = null;
+
+        // alert(this.endDate);
         this.dias = 0;
         this.diasCalculados.emit(this.dias);
         return; // Salir de la función
@@ -144,13 +150,15 @@ export class CalendarioComponent {
 
     } else {
       this.dias = 0;
+      // this.endDate = null; 
     }
   }
   
   ventanareservada(){
     Swal.fire("Fecha ya reservada");
+    this.range.reset();
     this.startDate = null;
-    this.endDate = null;
+    this.endDate = this.startDate;
     this.dias = 0;  
     this.diasCalculados.emit(this.dias);
     return;
