@@ -1,9 +1,7 @@
-
-
 h2{
     font-size: 24px;
+    padding: 10px;
 }
-
 
 .table-container{
     display: flex;
@@ -22,10 +20,13 @@ h2{
     padding: 10px;
 }
 
+.table-responsive{
+    margin-bottom: 202px;
+}
+
 
 @media screen and (max-width: 768px) {
     .table-container{
         width: 400px;
-    }
-    
+    }   
 }
