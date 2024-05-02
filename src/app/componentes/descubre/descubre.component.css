@@ -134,11 +134,3 @@
     justify-content: center;
 }
 
-.hotelfav:hover .text{
-    display: none;
-}
-
-.hotelfav:hover img{
-    filter: brightness(70%);
-}
-
