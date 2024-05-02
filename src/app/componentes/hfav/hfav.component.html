@@ -1,25 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../../../node_modules/bootstrap/scss/bootstrap.scss">
-</head>
-<body>
-  <div class="card-columns">
-          @for (item of array; track item) {
-              <div class="card">
-                  <figure class="rounded rounded-4 overflow-hidden bsb-overlay-hover">
-                    <a href="#!">
-                      <img [src]="item.image" class="img-fluid bsb-scale-up bsb-hover-scale"  alt="Photography">
-                    </a>
-                    <figcaption>
-                      <h3 class="text-white bsb-hover-fadeInLeft">{{item.casa}}</h3>
-                      <div class="text-white bsb-hover-fadeInRight">{{item.recamara}}</div>
-                    </figcaption>
-                  </figure>
-              </div>
-          }
-  </div>
-</body>
-</html>
+<div class="card-columns">
+        @for (item of array; track item) {
+            <div class="card">
+                <figure class="rounded rounded-4 overflow-hidden bsb-overlay-hover">
+                  <a href="#!">
+                    <img [src]="item.image" class="img-fluid bsb-scale-up bsb-hover-scale"  alt="Photography">
+                  </a>
+                  <figcaption>
+                    <h3 class="text-white bsb-hover-fadeInLeft">{{item.casa}}</h3>
+                    <div class="text-white bsb-hover-fadeInRight">{{item.recamara}}</div>
+                  </figcaption>
+                </figure>
+            </div>
+        }
+</div>
