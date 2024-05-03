@@ -1,4 +1,4 @@
-  import { Component, Input } from '@angular/core';
+  import { Component, EventEmitter, Input, Output } from '@angular/core';
   import { Casas } from '../../casas';
   import { CasasService } from '../../servicios/casas.service';
   import { ActivatedRoute, Router, RouterLink } from '@angular/router';
@@ -32,11 +32,13 @@ import { SlideComponent } from '../slide/slide.component';
       );
     }
     
+
     nombre: string = "";
     correo: string = "";
     telefono!: number;
     direccionuser: string = "";
 
+    hora: string = "02:20"; 
     dias!: number;
     start!: Date;
     end!: Date;
@@ -104,6 +106,7 @@ import { SlideComponent } from '../slide/slide.component';
         mes2: this.mes2,
         year1: this.year1,
         year2: this.year2,
+        hora: this.hora,
         casa: {
           precio: this.casa.precio,
           imagen1: this.casa.imagen1,
@@ -119,7 +122,7 @@ import { SlideComponent } from '../slide/slide.component';
 
     this.router.navigate(['/descubre']);
     }  
-    
+     
   }
 
   export interface Reserva {
@@ -139,6 +142,7 @@ import { SlideComponent } from '../slide/slide.component';
     mes2: number;
     year1: number;
     year2: number;
+    hora: string;
     casa: {
       precio: number;
       imagen1: string;

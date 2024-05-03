@@ -1,11 +1,10 @@
 <div class="reserva">
     <div class="formulario">
-        <!-- <h1><a class="derecha" [routerLink]="['/casaunica',id]"><</a>Hacer reservación</h1>
-         -->
-         <div class="button" style="padding: 10px;"> <!-- Agrega el padding que desees aquí -->
+        
+         <div class="button" style="padding: 10px;"> 
             <h1><a [routerLink]="['/casaunica',id]" mat-fab color="success" aria-label="Example icon button with a delete icon">
             
-              <mat-icon>keyboard_arrow_left</mat-icon> <!-- Utiliza el icono de flecha a la derecha -->
+              <mat-icon>keyboard_arrow_left</mat-icon>
             </a> Hacer reservación</h1>
           </div>
         <hr>
@@ -15,7 +14,9 @@
                 <p>Fechas</p>
 
                 <app-calendario (diasCalculados)="calculardias($event)" (endcalc)="calcularend($event)" (startcalc)="calcularstart($event)"></app-calendario>
-                
+                <label for="hora">
+                    <input class="hora" type="time" name="hora" [(ngModel)]="hora" id="hora">
+                </label>                  
             </div>
         </div>
         <hr>
