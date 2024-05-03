@@ -26,7 +26,8 @@ export class HFavComponent {
   }
   ngOnInit(){
     console.log("ya cargó el componente");
-    this.recuperarDatos();
+    this.array = this.ImageService.getMason();
+    this.tipoHotel(this.array,this.tipo);
   }
 
   recuperarDatos():void{
