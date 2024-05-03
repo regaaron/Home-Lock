@@ -1,15 +1,9 @@
-<div class="card-columns">
-        @for (item of array; track item) {
-            <div class="card">
-                <figure class="rounded rounded-4 overflow-hidden bsb-overlay-hover">
-                  <a href="#!">
-                    <img [src]="item.image" class="img-fluid bsb-scale-up bsb-hover-scale"  alt="Photography">
-                  </a>
-                  <figcaption>
-                    <h3 class="text-white bsb-hover-fadeInLeft">{{item.casa}}</h3>
-                    <div class="text-white bsb-hover-fadeInRight">{{item.recamara}}</div>
-                  </figcaption>
-                </figure>
-            </div>
-        }
+<div class="container">
+  @for (item of array; track item) {
+    <div class="box">
+      <img [src]="item.image" alt="Photography">
+      <!-- <h3>{{item.casa}}</h3> -->
+      <!-- <div>{{item.recamara}}</div> -->
+    </div>
+  }
 </div>
