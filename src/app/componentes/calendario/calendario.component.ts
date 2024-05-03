@@ -1,4 +1,4 @@
-import {Component, EventEmitter, Output} from '@angular/core';
+import {Component, EventEmitter, Input, Output} from '@angular/core';
 import {FormGroup, FormControl, FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {CommonModule, JsonPipe} from '@angular/common';
 import {MatDatepickerModule} from '@angular/material/datepicker';
@@ -10,6 +10,9 @@ import { Reserva } from '../reservas/reservas.component';
 import {MatSnackBar, MatSnackBarModule} from '@angular/material/snack-bar';
 
 import { MAT_DATE_LOCALE } from '@angular/material/core';
+import { CasasService } from '../../servicios/casas.service';
+import { ActivatedRoute } from '@angular/router';
+import { Casas } from '../../casas';
 
 @Component({
   selector: 'app-calendario',
@@ -28,18 +31,28 @@ export class CalendarioComponent {
   @Output() startcalc = new EventEmitter<Date>();
   
   @Output() endcalc = new EventEmitter<Date>();
+
+  
+  @Output() dire = new EventEmitter<string>();
   startDate: Date | null = null;
   endDate: Date | null = null;
   dias: number | null = null;
 
   minDate: Date;
   reservas: Reserva[] = []; 
+  @Input() casa!: Casas;
   
 
-  constructor(private snackBar: MatSnackBar) {
+  constructor(private snackBar: MatSnackBar,public casaService : CasasService, public activatedRoute: ActivatedRoute) {
     const today = new Date(); // Obtener la fecha actual y la hora actual
     const reservasGuardadas: string | null = localStorage.getItem('reservas');
-
+    activatedRoute.params.subscribe(
+      params =>{
+        this.casa = casaService.getUnaCasa(params['ids']);
+      }
+    );
+    console.log(this.casa.direccion);
+    
     if (reservasGuardadas) {
       this.reservas = JSON.parse(reservasGuardadas);
     }
@@ -62,10 +75,12 @@ export class CalendarioComponent {
       const millisecondsInDay = 1000 * 60 * 60 * 24;
       const differenceInDays = Math.floor(differenceInMilliseconds / millisecondsInDay);
 
-      this.dias = differenceInDays;
+      this.dias = differenceInDays + 1;
+      // if(this.dias == 0){
+      //   this.dias = 1;
+      // }
       console.log(this.dias);
       
-
       if (this.startDate < this.minDate) {
         Swal.fire("Fecha no permitida");
         this.range.reset();
@@ -81,11 +96,11 @@ export class CalendarioComponent {
       for (let i = 0; i < this.reservas.length; i++) {
         const reserva = this.reservas[i];
 
-        let bandera = true;
         const day = 1;
+        if(this.casa.direccion == reserva.casa.direccion){
         if(this.startDate.getMonth() == reserva.mes1 && this.endDate.getMonth() == reserva.mes1){
             if(this.endDate.getMonth() != reserva.mes2 && this.startDate.getDate() >= reserva.dia1){
-              this.ventanareservada();
+              this.ventanareservada(reserva.casa.direccion);
               console.log("hola1");
               return;
               
@@ -93,7 +108,7 @@ export class CalendarioComponent {
                 //si la fecha es menor que la primera donde los meses sean iguales de los registros
                 if(((this.startDate.getDate()  <= reserva.dia2 && this.startDate.getDate()  >= reserva.dia1) 
                    || (this.endDate.getDate()  >= reserva.dia1 && this.endDate.getDate()  <= reserva.dia2 ))){
-                    this.ventanareservada();
+                    this.ventanareservada(reserva.casa.direccion);
                     console.log("hola2");
                     return;
                    }
@@ -102,18 +117,18 @@ export class CalendarioComponent {
                 
           if(this.endDate.getMonth() != reserva.mes1){
             if(this.startDate.getDate() <= reserva.dia2 ){
-              this.ventanareservada();
+              this.ventanareservada(reserva.casa.direccion);
             }
           }else if(this.endDate.getDate() > reserva.dia2){
             if(((this.startDate.getDate()  <= reserva.dia2 || this.startDate.getDate()  >= day) 
               && (this.endDate.getDate()  >= day || this.endDate.getDate()  <= reserva.dia2 ))){
-                this.ventanareservada();
+                this.ventanareservada(reserva.casa.direccion);
                 console.log("hola3");
                 return;
               }
           }
         }else if(this.startDate.getMonth() == reserva.mes1 && this.endDate.getMonth() == reserva.mes2){
-          this.ventanareservada();
+          this.ventanareservada(reserva.casa.direccion);
           console.log("hola4");
           return;
         }else {
@@ -134,7 +149,8 @@ export class CalendarioComponent {
           //   return;
           // }
         }
-      }    
+      } 
+    }   
 
       // Swal.fire("Fecha reservada con exito");
       // this.snackBar.open('Message archived', 'Undo');
@@ -154,7 +170,9 @@ export class CalendarioComponent {
     }
   }
   
-  ventanareservada(){
+  ventanareservada(dire: string){
+    console.log(dire);
+    console.log(this.casa.direccion);
     Swal.fire("Fecha ya reservada");
     this.range.reset();
     this.startDate = null;
