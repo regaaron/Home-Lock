@@ -1,7 +1,9 @@
 <body>
   <div class="card-grid" >
     @for (item of miscasas; track item; let i = $index) {
-        <div class="card">
+        <!-- <div class="card"> -->
+        <div [ngClass]="'card'">
+
 
             <div id={{i}}  class="carousel slide carousel-fade">
             <a [routerLink]="['/casaunica',i]">

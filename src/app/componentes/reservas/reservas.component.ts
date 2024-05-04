@@ -38,7 +38,7 @@ import { SlideComponent } from '../slide/slide.component';
     telefono!: number;
     direccionuser: string = "";
 
-    hora: string = "02:20"; 
+    hora: string = "12:00"; 
     dias!: number;
     start!: Date;
     end!: Date;
