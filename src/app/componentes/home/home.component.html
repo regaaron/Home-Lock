@@ -53,7 +53,7 @@
                           }
                           </h3>
                       <div class="spacer"></div>
-                      <h3 class="calf"><i class="fa-solid fa-star"></i> {{item.calificacion}}</h3>
+                      <h3 class="calf" [ngClass]="{'gold': item.calificacion == 5, 'black': item.calificacion != 0}"><i class="fa-solid fa-star"></i> {{item.calificacion}}</h3>
                   </div>
                   <div class="card-text">
                     <span><small><i class="fa-solid fa-user user"></i> Anfitrion: {{item.anfitrion}}</small></span>

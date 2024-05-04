@@ -9,6 +9,15 @@ span{
     color: rgba(54, 54, 54, 0.849);
 }
 
+.black i{
+    color: black;
+}
+
+.gold i {
+    color: rgb(255, 242, 0);
+    
+}
+
 .calif{
     display: flex;
     justify-content: space-between;
