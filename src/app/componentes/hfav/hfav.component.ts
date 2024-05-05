@@ -26,15 +26,18 @@ export class HFavComponent {
   }
   ngOnInit(){
     console.log("ya cargó el componente");
-    this.array = this.ImageService.getMason();
-    this.tipoHotel(this.array,this.tipo);
+    this.recuperarDatos();
   }
 
   recuperarDatos():void{
     console.log("tomando datos ( •̀ ω •́ )✧...");
     this.ImageService.retornar().subscribe({
       next: this.successRequest.bind(this),
-      error: (err) => {console.log(err)}
+      error: (err) => {
+        // console.log(err);
+        this.array = this.ImageService.getMason();
+        this.tipoHotel(this.array,this.tipo);
+      }
     });
     
   }

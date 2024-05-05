@@ -22,31 +22,29 @@
         <hr>
         <div class="datos">
             <h3>-Completa la información-</h3>
-            <form (submit)="guardarReserva()">
+            <form #form="ngForm" (ngSubmit)="guardarReserva()" novalidate>
                 <div class="input-container">
                     <i class="fas fa-user"></i>
-                    <input type="text" placeholder="Nombre" [(ngModel)] = "nombre" [ngModelOptions]="{standalone: true}" required>
+                    <input type="text" placeholder="Nombre" name="nombre" [(ngModel)]="nombre" required>
                 </div>
                 <div class="input-container">
                     <i class="fas fa-envelope"></i>
-                    <input type="email" placeholder="Correo electrónico" [(ngModel)] = "correo" [ngModelOptions]="{standalone: true}" required>
+                    <input type="email" placeholder="Correo electrónico" name="correo" [(ngModel)]="correo" required>
                 </div>
-
                 <div class="input-container">
                     <i class="fas fa-phone"></i>
-                    <input type="tel" placeholder="Teléfono" [(ngModel)] = "telefono" [ngModelOptions]="{standalone: true}" required>
+                    <input type="tel" placeholder="Teléfono" name="telefono" [(ngModel)]="telefono" required>
                 </div>
                 <div class="input-container">
                     <i class="fas fa-map-marker-alt"></i>
-                    <input type="text" placeholder="Dirección" [(ngModel)] = "direccionuser" [ngModelOptions]="{standalone: true}" required>
+                    <input type="text" placeholder="Dirección" name="direccionuser" [(ngModel)]="direccionuser" required>
                 </div>
                 <div class="input-container">
-                    <app-slide/>
+                    <app-slide></app-slide>
                 </div>
-                @if (dias > 0) {
-                    <button type="submit">Reservar</button>
-                }
+                <button type="submit" [disabled]="!form.valid || dias <= 0">Reservar</button>
             </form>
+            
         </div>
     </div>
     <!-- div de la derecha ticket impreso -->
