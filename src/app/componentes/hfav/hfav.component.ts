@@ -55,10 +55,10 @@ export class HFavComponent {
     let aux: any[]=[];
     let c: number=0;
     for(let i in data){
-      if(data[i].tipo==tipo){
+      // if(data[i].tipo==tipo){
         aux[c]=data[i];
         c++;
-      }
+      // }
     }
     this.array=aux;
     console.log("arreglo por tipo", this.array);
